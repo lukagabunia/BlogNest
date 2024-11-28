@@ -1,0 +1,32 @@
+.accordion-container {
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.accordion-container img {
+  width: 15px;
+}
+.accordion-container img:hover {
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: transform 0.5s ease-in-out;
+}
+.accordion-header {
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-inline: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.accordion-body {
+  font-size: 20px;
+  padding-inline: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: none;
+  border-bottom: 1px solid #ccc;
+}
+.accordion-item.active .accordion-body {
+  display: block;
+}
