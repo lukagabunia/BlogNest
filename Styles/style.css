@@ -1,12 +1,11 @@
 @import url(./card.css);
 @import url(./color.css);
 
-/* for body added min height, flex, box-sizing,flex-direction */
+/* for body added min height, flex, flex-direction */
 
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   display: flex;
