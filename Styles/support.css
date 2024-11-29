@@ -4,11 +4,11 @@
 }
 .accordion-container img {
   width: 15px;
+  transition: transform 0.5s ease-in-out;
 }
 .accordion-container img:hover {
   cursor: pointer;
   transform: rotate(180deg);
-  transition: transform 0.5s ease-in-out;
 }
 .accordion-header {
   justify-content: space-between;
