@@ -33,6 +33,7 @@
     display: flex;
     overflow: scroll;
     gap: 0 15px;
+    overflow-y: hidden;
   }
   .blog-container {
     grid-column: 1 / span 4;
