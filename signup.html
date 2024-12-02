@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Links-->
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="stylesheet" href="./Styles/signup.css" />
+
+    <!--Icons-->
+    <link rel="icon" href="./Assets/Icons/egg-solid.ico" />
+    <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <header class="d-flex">
+      <div class="container d-flex">
+        <a href="#">
+          <img
+            class="nav-img"
+            src="./Assets/Img/mug-hot-solid.svg"
+            alt="coffee"
+          />
+        </a>
+        <nav class="d-flex">
+          <div>
+            <a href="./index.html">Blog</a>
+            <a href="#">Main</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./support.html">Support</a>
+          </div>
+          <div>
+            <a href="./login.html">Login</a>
+            <a href="./signup.html">Sign Up</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container body-container">
+      <div class="pass-container">
+        <h1>Sign up</h1>
+        <form action="">
+          <div>
+            <label for="name" class="d-block mb-10">Enter your name</label>
+            <input
+              id="name"
+              type="text"
+              class="pass-input d-block w-100"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div>
+            <label for="surname" class="d-block mb-10"
+              >Enter your surname</label
+            >
+            <input
+              id="surname"
+              type="text"
+              class="pass-input d-block w-100"
+              placeholder="Surname"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="d-block mb-10">Enter your email</label>
+            <input
+              id="email"
+              type="email"
+              class="pass-input d-block w-100"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="d-block mb-10">Confirm your email</label>
+            <input
+              id="email"
+              type="email"
+              class="pass-input d-block w-100"
+              placeholder="Confirm your email"
+              required
+            />
+          </div>
+          <label for="gender" class="d-block mb-10">Select your gender</label>
+          <div class="gender mb-10" id="gender">
+            <input
+              id="gender"
+              type="radio"
+              class="pass-input-gender"
+              required
+            />
+            <label for="gender">Man</label>
+            <input
+              id="gender"
+              type="radio"
+              class="pass-input-gender"
+              required
+            />
+            <label for="gender">Women</label>
+          </div>
+          <div>
+            <label for="pass" class="d-block mb-10">Enter your password</label>
+            <input
+              id="pass"
+              type="password"
+              class="pass-input d-block w-100"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div>
+            <label for="conpass" class="d-block mb-10"
+              >Confirm your password</label
+            >
+            <input
+              id="conpass"
+              type="password"
+              class="pass-input d-block w-100"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+          <div class="d-block mb-10">
+            <input id="remember" type="checkbox" />
+            <label for="remember">Remember me</label>
+          </div>
+          <button class="btn btn-reset w-100 mb-10" type="submit">
+            Sign up
+          </button>
+        </form>
+        <div class="d-block mb-10">
+          <p>
+            Already have an account?
+            <a class="btn btn-link" href="./login.html">Log in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+          ipsum deleniti eaque quas, quibusdam possimus corporis consequatur
+          officia sit, et porro, quae voluptatibus odio. Saepe commodi minus
+          fugiat ipsa quas.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
