@@ -21,7 +21,11 @@ header {
 header .container {
   align-items: center;
 }
+.mobile-view {
+  display: none;
+}
 nav {
+  display: flex;
   justify-content: space-between;
   width: calc(100% - 35px);
 }

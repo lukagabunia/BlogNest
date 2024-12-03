@@ -45,12 +45,60 @@
 }
 /* mobiles */
 @media screen and (max-width: 576px) {
+  .blog-main-container {
+    margin-top: 10px;
+  }
   .container {
     width: 100%;
     padding: 0 15px;
-    padding-top: 30px;
   }
   .blog-container {
+    margin-bottom: 20px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .mobile-view {
+    display: flex;
+    color: white;
+    cursor: pointer;
+    gap: 0 10px;
+    align-items: center;
+  }
+  .mobile-view img {
+    width: 20px;
+  }
+  /* imis gamo rom heade nav-s qonda gawerili d-flex calke html-shi klasis saxelit da ara navze styleshi gadaawera display none - s*/
+  header nav {
+    display: none;
+  }
+  header nav.active {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: aqua;
+    left: 0;
+    flex-direction: column;
+    padding: 10px;
+  }
+  /* pirveli child nav.activis */
+  header nav.active > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  /* meore divi nav.activishi shemavali bolo a linkis qveda borderi movashorot */
+  header nav.active > div:last-child a:last-child {
+    border-bottom: none;
+  }
+  header nav.active a {
+    padding: 5px 0;
+    border-bottom: 1px solid #ffffffbd;
+  }
+  /* > nishnavs rom headeris direct childs mimartavs (pirvels) igivea rac first child */
+  header > .container {
+    justify-content: space-between;
+  }
+  header {
+    position: relative;
   }
 }
