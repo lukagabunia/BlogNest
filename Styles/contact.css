@@ -6,8 +6,19 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
+  margin: auto;
 }
-
+.container.body-container div:last-child h2 {
+  text-align: center;
+}
+.container.body-container div:last-child ul {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.container.body-container ul {
+  padding-left: 70px;
+}
 .container.body-container input,
 textarea {
   height: 32px;
