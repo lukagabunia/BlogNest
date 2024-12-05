@@ -3,7 +3,7 @@
   .container {
     width: 768px;
   }
-  .container.body-container {
+  .container.body-container.contact-container {
     width: 600px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -11,7 +11,7 @@
     margin: auto;
     padding: 20px 0;
   }
-  .container.body-container ul {
+  .container.body-container.contact-container ul {
     padding-left: 40px;
   }
 }
@@ -27,17 +27,17 @@
   .categories {
     padding: 10px;
   }
-  .categories:first-child {
+  .blog-main-container .categories:first-child {
     grid-column: 1 / span 2;
   }
-  .categories:nth-child(2) {
-    grid-column: 3 / span 2;
+  .blog-main-container .categories:nth-child(2) {
+    grid-column: 3 / span 4;
   }
-  .categories:nth-child(3) {
+  .blog-main-container .categories:nth-child(3) {
     grid-column: 1 / span 2;
   }
-  .categories:nth-child(4) {
-    grid-column: 3 / span 2;
+  .blog-main-container .categories:nth-child(4) {
+    grid-column: 3 / span 4;
   }
   .navigation {
     grid-column: 1 / span 4;
@@ -59,13 +59,22 @@
   .similar-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .container.body-container {
+  .container.body-container.contact-container {
     width: 500px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 15px;
     margin: auto;
     padding: 20px 0;
+  }
+  .accordion-container img {
+    width: 14px;
+  }
+  .accordion-header {
+    font-size: 26px;
+  }
+  .accordion-body {
+    font-size: 18px;
   }
 }
 /* mobiles */
@@ -141,13 +150,24 @@
   .similar-container .card-body {
     width: 200px;
   }
-  .container.body-container {
-    width: 500px;
-    display: flex;
-    grid-template-columns: repeat(2, minmax(0, 0.5fr));
+  .container.body-container.contact-container {
+    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 10px;
     margin: auto;
     padding: 20px 0;
     padding-inline: 10px;
+  }
+  .support-main {
+    padding: 10px 30px;
+  }
+  .auth-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .pass-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 }
