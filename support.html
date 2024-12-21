@@ -11,10 +11,12 @@
     <!--Icons-->
     <link rel="icon" href="./Assets/Icons/egg-solid.ico" />
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
+    <!--js-->
+    <script src="./js/app.js" defer></script>
     <title>Reset Password</title>
   </head>
   <body>
-    <header class="d-flex">
+    <header>
       <div class="container d-flex">
         <a href="#">
           <img
@@ -36,7 +38,7 @@
           </div>
         </nav>
         <div class="mobile-view">
-          <span>Menu</span>
+          <span class="menu-toggle">Menu</span>
           <img src="./Assets/Icons/bars-solid (1).svg" alt="menu bar" />
         </div>
       </div>
@@ -47,11 +49,12 @@
           <div class="accordion-header d-flex">
             How to write post?
             <img
+              class="active-img"
               src="./Assets/Icons/arrow-down-long-solid.svg"
               alt="drop down"
             />
           </div>
-          <div class="accordion-body">
+          <div class="accordion-body active">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             repudiandae alias nihil repellendus sapiente iste, rerum molestiae
             ducimus ipsam dolorum! Praesentium fugiat eum dolor quos consequatur
@@ -62,29 +65,12 @@
             excepturi.
           </div>
         </div>
-        <div class="accordion-item">
-          <div class="accordion-header d-flex">
-            How to log in
-            <img
-              src="./Assets/Icons/arrow-down-long-solid.svg"
-              alt="drop down"
-            />
-          </div>
-          <div class="accordion-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            repudiandae alias nihil repellendus sapiente iste, rerum molestiae
-            ducimus ipsam dolorum! Praesentium fugiat eum dolor quos consequatur
-            amet quisquam atque excepturi. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Sequi repudiandae alias nihil
-            repellendus sapiente iste, rerum molestiae ducimus ipsam dolorum!
-            Praesentium fugiat eum dolor quos consequatur amet quisquam atque
-            excepturi.
-          </div>
-        </div>
+
         <div class="accordion-item">
           <div class="accordion-header d-flex">
             How to sign up
             <img
+              class="active-img"
               src="./Assets/Icons/arrow-down-long-solid.svg"
               alt="drop down"
             />
@@ -104,6 +90,7 @@
           <div class="accordion-header d-flex">
             How can I reset my password?
             <img
+              class="active-img"
               src="./Assets/Icons/arrow-down-long-solid.svg"
               alt="drop down"
             />

@@ -2,11 +2,13 @@
   border: 1px solid #ccc;
   border-bottom: none;
 }
-.accordion-container img {
+.active-img {
   width: 15px;
-  transition: transform 0.5s ease-in-out;
 }
-.accordion-container img:hover {
+.accordion-item.active .active-img {
+  transform: rotate(180deg);
+}
+.active-img:hover {
   cursor: pointer;
   transform: rotate(180deg);
 }
@@ -31,6 +33,6 @@
   display: none;
   border-bottom: 1px solid #ccc;
 }
-.accordion-item.active .accordion-body {
+.accordion-body.active {
   display: block;
 }

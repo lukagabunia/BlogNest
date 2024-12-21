@@ -1,8 +1,6 @@
 @import url(./card.css);
 @import url(./color.css);
 
-/* for body added min height, flex, flex-direction */
-
 * {
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
@@ -15,7 +13,8 @@ body {
   overflow-x: hidden;
 }
 header {
-  height: 60px;
+  display: flex;
+  padding: 10px;
   background-color: hsl(271, 76%, 53%);
   align-items: center;
 }
@@ -57,7 +56,7 @@ nav a {
   text-decoration: none;
 }
 
-/* featured container logic added flex:1 to body-container*/
+/* featured container logic*/
 
 .container {
   margin: auto;
