@@ -1,24 +1,6 @@
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-header {
-  align-items: center;
-  padding: 10px;
-}
-nav {
-  align-items: center;
-}
-body {
-  min-height: 100vh;
-}
 .container.body-container {
   width: 800px;
   display: grid;

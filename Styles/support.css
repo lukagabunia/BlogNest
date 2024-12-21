@@ -3,6 +3,7 @@
   border-bottom: none;
 }
 .active-img {
+  transition: 0.5s ease-in-out;
   width: 15px;
 }
 .accordion-item.active .active-img {

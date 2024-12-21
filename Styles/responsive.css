@@ -147,7 +147,7 @@
     width: 200px;
   }
   .container.body-container.contact-container {
-    width: 450px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 10px;
