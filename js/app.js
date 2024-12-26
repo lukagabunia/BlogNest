@@ -6,8 +6,8 @@ items.forEach((item) => {
   const body = item.querySelector(".accordion-body");
 
   header.addEventListener("click", () => {
-    item.classList.toggle("active"); // Toggle the active class on the accordion item
-    body.classList.toggle("active"); // Toggle visibility of the accordion body
+    item.classList.toggle("active");
+    body.classList.toggle("active");
   });
 });
 
