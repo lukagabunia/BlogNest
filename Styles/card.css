@@ -51,7 +51,7 @@
   padding: 10px;
   border-radius: 5px;
 }
-.blog-container {
+.post-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-column: 2 / span 3;

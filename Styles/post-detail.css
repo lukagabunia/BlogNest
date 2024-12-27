@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 .similar-title {
   display: none;
 }
@@ -15,10 +12,10 @@
   grid-column: 1/5;
   text-align: center;
 }
-.blog-img {
+.post-img {
   aspect-ratio: 16 / 9;
   object-fit: fill;
 }
-.container.blog-detail-container h2 {
+.container.post-detail-container h2 {
   text-align: center;
 }

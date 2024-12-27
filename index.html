@@ -6,29 +6,29 @@
 
     <!--Links-->
     <link rel="stylesheet" href="./Styles/style.css" />
-    <link rel="stylesheet" href="./Styles/blog.css" />
     <link rel="stylesheet" href="./Styles/responsive.css" />
+    <link rel="stylesheet" href="Styles/main.css" />
     <!--Icons-->
     <link rel="icon" href="./Assets/Icons/egg-solid.ico" />
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
     <!--js-->
     <script src="./js/app.js" defer></script>
-    <title>Blog Page</title>
+    <title>BlogNest</title>
   </head>
   <body>
     <header>
       <div class="container d-flex">
-        <a href="#">
+        <a class="nav-action" href="./index.html">
           <img
             class="nav-img"
             src="./Assets/Img/mug-hot-solid.svg"
             alt="coffee"
-          />
+            />
+            <span class="nav-logo">BlogNest</span>
         </a>
         <nav>
           <div>
-            <a href="./index.html">Blog</a>
-            <a href="#">Main</a>
+            <a href="./post.html">Posts</a>
             <a href="./contact.html">Contact</a>
             <a href="./support.html">Support</a>
           </div>
@@ -43,244 +43,36 @@
         </div>
       </div>
     </header>
-    <div class="container body-container blog-main-container">
-      <a class="categories" href="#">
-        <img src="./Assets/Img/globe-solid.svg" alt="global" />
-        <h3>Global</h3>
-      </a>
-      <a class="categories" href="#">
-        <img src="./Assets/Img/futbol-solid.svg" alt="sport" />
-        <h3>Sport</h3>
-      </a>
-      <a class="categories" href="#">
-        <img src="./Assets/Img/palette-solid.svg" alt="art" />
-        <h3>Art</h3>
-      </a>
-      <a class="categories" href="#">
-        <img src="./Assets/Img/people-group-solid.svg" alt="social" />
-        <h3>Social</h3>
-      </a>
-      <ul class="navigation">
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Nature</a></li>
-        <li><a href="#" class="d-block">Social</a></li>
-        <li><a href="#" class="d-block">Culture</a></li>
-        <li><a href="#" class="d-block">Sport</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-        <li><a href="#" class="d-block">Space</a></li>
-      </ul>
-      <div class="blog-container">
-        <div class="card">
-          <div class="img-container">
-            <img
-              class="card-img w-100 d-block"
-              src="./Assets/Img/card-img.jpg"
-              alt="card img"
-            />
-            <img
-              class="fav-icon"
-              src="./Assets/Icons/heart-regular.svg"
-              alt="fav icon"
-            />
-            <span>26/11/24</span>
-          </div>
-          <div class="card-body">
-            <h3>Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              eveniet inventore, amet incidunt recusandae aliquid? Accusamus,
-              voluptate, excepturi labore reiciendis provident modi ipsa aliquid
-              quae a atque corrupti? Et, sed?
-            </p>
-            <div class="action-container d-flex">
-              <button class="btn card-btn">
-                <a href="./blog-detail.html">See more...</a>
-              </button>
-              <img
-                class="share-icon"
-                src="./Assets/Icons/share-solid.svg"
-                alt="share"
-              />
-            </div>
-          </div>
+    <div class="main-container container">
+      <div class="hero-container">
+        <div class="action">
+            <h1>
+              Welcome to <span class="highlight">BlogNest</span> Discover, share, and connect
+              through stories that inspire. Dive into a world of ideas and
+              perspectives on topics that matter to you.
+            </h1>
+            <br />
+            <h2>✨ Why Join Us?</h2>
+            <ul>
+              <li>Share your unique voice with the world.</li>
+              <li>Discover diverse perspectives from passionate writers.</li>
+              <li>
+                Connect and engage with a community of like-minded individuals.
+              </li>
+            </ul>
+            <h3>Ready to start your journey? </h3>👉
+            <a class="btn btn-link" href="signup.html">Sign Up Now!  </a>
+            <span>or</span>
+            <a class="btn btn-link" href="post.html"> Explore Posts</a>
+            <h4>Let’s make every story count!</h3>
         </div>
-        <div class="card">
-          <div class="img-container">
-            <img
-              class="card-img w-100 d-block"
-              src="./Assets/Img/card-img.jpg"
-              alt="card img"
-            />
-            <img
-              class="fav-icon"
-              src="./Assets/Icons/heart-regular.svg"
-              alt="fav icon"
-            />
-            <span>26/11/24</span>
-          </div>
-          <div class="card-body">
-            <h3>Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              eveniet inventore, amet incidunt recusandae aliquid? Accusamus,
-              voluptate, excepturi labore reiciendis provident modi ipsa aliquid
-              quae a atque corrupti? Et, sed?
-            </p>
-            <div class="action-container d-flex">
-              <button class="btn card-btn">
-                <a href="./blog-detail.html">See more...</a>
-              </button>
-              <img
-                class="share-icon"
-                src="./Assets/Icons/share-solid.svg"
-                alt="share"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img
-              class="card-img w-100 d-block"
-              src="./Assets/Img/card-img.jpg"
-              alt="card img"
-            />
-            <img
-              class="fav-icon"
-              src="./Assets/Icons/heart-regular.svg"
-              alt="fav icon"
-            />
-            <span>26/11/24</span>
-          </div>
-          <div class="card-body">
-            <h3>Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              eveniet inventore, amet incidunt recusandae aliquid? Accusamus,
-              voluptate, excepturi labore reiciendis provident modi ipsa aliquid
-              quae a atque corrupti? Et, sed?
-            </p>
-            <div class="action-container d-flex">
-              <button class="btn card-btn">
-                <a href="./blog-detail.html">See more...</a>
-              </button>
-              <img
-                class="share-icon"
-                src="./Assets/Icons/share-solid.svg"
-                alt="share"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img
-              class="card-img w-100 d-block"
-              src="./Assets/Img/card-img.jpg"
-              alt="card img"
-            />
-            <img
-              class="fav-icon"
-              src="./Assets/Icons/heart-regular.svg"
-              alt="fav icon"
-            />
-            <span>26/11/24</span>
-          </div>
-          <div class="card-body">
-            <h3>Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              eveniet inventore, amet incidunt recusandae aliquid? Accusamus,
-              voluptate, excepturi labore reiciendis provident modi ipsa aliquid
-              quae a atque corrupti? Et, sed?
-            </p>
-            <div class="action-container d-flex">
-              <button class="btn card-btn">
-                <a href="./blog-detail.html">See more...</a>
-              </button>
-              <img
-                class="share-icon"
-                src="./Assets/Icons/share-solid.svg"
-                alt="share"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img
-              class="card-img w-100 d-block"
-              src="./Assets/Img/card-img.jpg"
-              alt="card img"
-            />
-            <img
-              class="fav-icon"
-              src="./Assets/Icons/heart-regular.svg"
-              alt="fav icon"
-            />
-            <span>26/11/24</span>
-          </div>
-          <div class="card-body">
-            <h3>Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              eveniet inventore, amet incidunt recusandae aliquid? Accusamus,
-              voluptate, excepturi labore reiciendis provident modi ipsa aliquid
-              quae a atque corrupti? Et, sed?
-            </p>
-            <div class="action-container d-flex">
-              <button class="btn card-btn">
-                <a href="./blog-detail.html">See more...</a>
-              </button>
-              <img
-                class="share-icon"
-                src="./Assets/Icons/share-solid.svg"
-                alt="share"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img
-              class="card-img w-100 d-block"
-              src="./Assets/Img/card-img.jpg"
-              alt="card img"
-            />
-            <img
-              class="fav-icon"
-              src="./Assets/Icons/heart-regular.svg"
-              alt="fav icon"
-            />
-            <span>26/11/24</span>
-          </div>
-          <div class="card-body">
-            <h3>Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              eveniet inventore, amet incidunt recusandae aliquid? Accusamus,
-              voluptate, excepturi labore reiciendis provident modi ipsa aliquid
-              quae a atque corrupti? Et, sed?
-            </p>
-            <div class="action-container d-flex">
-              <button class="btn card-btn">
-                <a href="./blog-detail.html">See more...</a>
-              </button>
-              <img
-                class="share-icon"
-                src="./Assets/Icons/share-solid.svg"
-                alt="share"
-              />
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="main-img-container">
+        <img
+          class="main-img"
+          src="./Assets/Img/main-img.jpg"
+          alt="main-img"
+        />
       </div>
     </div>
     <footer>
