@@ -52,6 +52,9 @@ nav a {
 .mb-10 {
   margin-bottom: 10px;
 }
+.mb-5 {
+  margin-bottom: 5px;
+}
 .d-flex {
   display: flex;
 }
@@ -111,6 +114,7 @@ footer p {
 }
 .pass-input {
   height: 32px;
+  border-width: 0 0 1px 0;
   outline: none;
   margin-bottom: 10px;
 }

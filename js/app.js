@@ -19,3 +19,14 @@ mobileView.addEventListener("click", (event) => {
   event.preventDefault();
   nav.classList.toggle("active");
 });
+
+/* // user authorization
+const userAuth = document.querySelector(".auth-input");
+const userPassword = document.querySelector("#password");
+userAuth.addEventListener("input", (e) => {
+  console.log(e);
+});
+if (userPassword.value.length < 8) {
+  userPassword.style.border = "1px solid red";
+}
+ */
