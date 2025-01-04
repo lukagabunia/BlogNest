@@ -80,17 +80,18 @@
             />
           </div>
           <div>
-            <label for="conEmail" class="d-block mb-5"
+            <label for="con-email" class="d-block mb-5"
               >Confirm your email</label
             >
             <input
-              id="conEmail"
+              id="con-email"
               type="email"
               class="signUp-input d-block w-100 mb-10"
               placeholder="Confirm your email"
               autocomplete="off"
               required
             />
+            <span class="con-email-error"></span>
           </div>
           <label for="gender" class="d-block mb-10">Select your gender</label>
           <div class="gender mb-10" id="gender">
@@ -123,19 +124,21 @@
               autocomplete="off"
               required
             />
+            <span class="error"></span>
           </div>
           <div>
-            <label for="conpass" class="d-block mb-5"
+            <label for="con-pass" class="d-block mb-5"
               >Confirm your password</label
             >
             <input
-              id="conpass"
+              id="con-pass"
               type="password"
               class="signUp-input d-block w-100 mb-10"
               placeholder="Confirm your password"
               autocomplete="off"
               required
             />
+            <span class="con-error"></span>
           </div>
           <div class="d-block mb-10">
             <input id="remember" type="checkbox" />
