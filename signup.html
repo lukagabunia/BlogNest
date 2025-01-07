@@ -13,6 +13,7 @@
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
     <!--js-->
     <script src="./js/app.js" defer></script>
+    <script src="./js/signup.js" defer></script>
     <title>Sign up</title>
   </head>
   <body>
@@ -44,29 +45,35 @@
       </div>
     </header>
     <div class="container body-container">
-      <div class="pass-container">
+      <div class="reg-container">
         <h1>Sign up</h1>
-        <form action="">
+        <form action="" method="get">
           <div>
-            <label for="name" class="d-block mb-5">Enter your name</label>
+            <label for="first-name" class="first-name d-block mb-5"
+              >Enter your first name</label
+            >
             <input
-              id="name"
+              id="first-name"
               type="text"
               class="signUp-input d-block w-100 mb-10"
-              placeholder="Name"
+              placeholder="First name"
               autocomplete="name"
               required
             />
+            <span class="firstname-error"></span>
           </div>
           <div>
-            <label for="surname" class="d-block mb-5">Enter your surname</label>
+            <label for="last-name" class="last-name d-block mb-5"
+              >Enter your last name</label
+            >
             <input
-              id="surname"
+              id="last-name"
               type="text"
               class="signUp-input d-block w-100 mb-10"
-              placeholder="Surname"
+              placeholder="Last name"
               required
             />
+            <span class="lastname-error"></span>
           </div>
           <div>
             <label for="email" class="d-block mb-5">Enter your email</label>
@@ -144,7 +151,11 @@
             <input id="remember" type="checkbox" />
             <label for="remember">Remember me</label>
           </div>
-          <button class="btn btn-reset w-100 mb-10" type="submit">
+          <button
+            id="signup-btn"
+            class="btn btn-reset w-100 mb-10"
+            type="submit"
+          >
             Sign up
           </button>
         </form>

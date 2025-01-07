@@ -13,6 +13,7 @@
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
     <!--js-->
     <script src="./js/app.js" defer></script>
+    <script src="./js/auth.js" defer></script>
     <title>Log in</title>
   </head>
   <body>
@@ -73,6 +74,7 @@
               placeholder="Enter your password"
               required
             />
+            <span class="auth-error"></span>
           </div>
           <div class="mb-10">
             <input
@@ -86,7 +88,11 @@
           <a class="btn btn-link d-block mb-10" href="./reset.html"
             >Forget Password?</a
           >
-          <button class="btn btn-primary d-block w-100 mb-10" type="submit">
+          <button
+            id="auth-btn"
+            class="btn btn-primary d-block w-100 mb-10"
+            type="submit"
+          >
             Login
           </button>
           <p class="d-block">

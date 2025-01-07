@@ -1,7 +1,4 @@
-.gender {
-  display: inline-block;
-}
-.reg-container {
+.pass-container {
   margin: auto;
   width: 300px;
   border: 1px solid #ccc;
@@ -9,22 +6,19 @@
   padding: 20px;
   border-radius: 5px;
 }
-p {
+.pass-container h1 {
   text-align: center;
-  margin: 0;
 }
-.btn-link:hover {
-  text-decoration: underline;
-}
-.signUp-input {
-  height: 32px;
-  border-width: 0 0 1px 0;
-  outline: none;
-}
-#signup-btn {
+.btn-reset {
   background-color: #8a2be2;
   color: white;
   border: 0;
   padding: 10px;
   border-radius: 5px;
+}
+.pass-input {
+  height: 32px;
+  border-width: 0 0 1px 0;
+  outline: none;
+  margin-bottom: 10px;
 }

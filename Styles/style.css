@@ -91,30 +91,3 @@ footer p {
   color: white;
   padding: 10px;
 }
-
-/* reset password */
-
-.pass-container {
-  margin: auto;
-  width: 300px;
-  border: 1px solid #ccc;
-  box-shadow: 0px 3px 4px 1px purple;
-  padding: 20px;
-  border-radius: 5px;
-}
-.pass-container h1 {
-  text-align: center;
-}
-.btn-reset {
-  background-color: #8a2be2;
-  color: white;
-  border: 0;
-  padding: 10px;
-  border-radius: 5px;
-}
-.pass-input {
-  height: 32px;
-  border-width: 0 0 1px 0;
-  outline: none;
-  margin-bottom: 10px;
-}
