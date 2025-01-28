@@ -9,6 +9,9 @@
   padding: 20px;
   border-radius: 5px;
 }
+.reg-container h1 {
+  text-align: center;
+}
 p {
   text-align: center;
   margin: 0;

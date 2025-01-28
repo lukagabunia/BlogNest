@@ -23,6 +23,9 @@ header {
 header .container {
   align-items: center;
 }
+header nav {
+  align-items: center;
+}
 .mobile-view {
   display: none;
 }
@@ -45,7 +48,19 @@ nav a {
   text-decoration: none;
   color: white;
   gap: 0 5px;
-  padding-right: 15px;
+  /* padding-right: 15px; */
+}
+.user-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: white;
+  padding: 5px;
+  display: block;
+}
+.user-container {
+  display: none;
 }
 
 /* utility */

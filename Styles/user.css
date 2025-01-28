@@ -1,0 +1,25 @@
+.user-main-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 5px;
+}
+.user-main-container img {
+  width: 100%;
+  height: 350px;
+  border-radius: 50%;
+  border-color: black;
+}
+.log-out-btn {
+  cursor: pointer;
+  border: none;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 65px;
+}
+.user-bio h2 {
+  text-decoration: underline;
+}

@@ -5,6 +5,8 @@
   box-shadow: 0px 3px 4px 1px purple;
   padding: 20px;
   border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .pass-container h1 {
   text-align: center;

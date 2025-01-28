@@ -7,18 +7,21 @@
     <!--Links-->
     <link rel="stylesheet" href="./Styles/style.css" />
     <link rel="stylesheet" href="./Styles/responsive.css" />
-    <link rel="stylesheet" href="./Styles/pass-reset.css" />
+    <link rel="stylesheet" href="./Styles/user.css" />
     <!--Icons-->
     <link rel="icon" href="./Assets/Icons/egg-solid.ico" />
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
     <!--js-->
     <script src="./js/app.js" defer></script>
-    <script src="./js/reset.js" defer></script>
-    <title>Reset Password</title>
+    <script src="./js/user.js" defer></script>
+    <title>User profile</title>
   </head>
   <body>
     <header>
       <div class="container d-flex">
+        <div class="mobile-view">
+          <img src="./Assets/Icons/bars-solid (1).svg" alt="menu bar" />
+        </div>
         <a class="nav-action" href="./index.html">
           <img
             class="nav-img"
@@ -33,34 +36,27 @@
             <a href="./contact.html">Contact</a>
             <a href="./support.html">Support</a>
           </div>
-          <div>
-            <a href="./login.html">Login</a>
-            <a href="./signup.html">Sign Up</a>
-          </div>
         </nav>
-        <div class="mobile-view">
-          <span>Menu</span>
-          <img src="./Assets/Icons/bars-solid (1).svg" alt="menu bar" />
+        <div class="log-out-container">
+          <button class="log-out-btn">Log out</button>
         </div>
       </div>
     </header>
     <div class="container body-container">
-      <div class="pass-container">
-        <h1>Reset Password</h1>
-        <label for="email" class="d-block mb-10">Enter your email</label>
-        <form action="">
-          <input
-            id="email"
-            type="email"
-            class="pass-input d-block w-100"
-            placeholder="Email"
-            required
-          />
-          <span class="email-error"></span>
-          <button id="reset-btn" type="submit" class="btn btn-reset w-100">
-            Reset
-          </button>
-        </form>
+      <div class="user-main-container">
+        <div class="user-portfolio">
+          <img src="./Assets/Img/user-solid.svg" alt="" />
+          <div class="change-image">
+            <label for="file">Change image</label>
+            <input type="file" id="file" />
+          </div>
+        </div>
+        <div class="user-bio">
+          <h2>Welcome, John Doe!</h2>
+          <p><strong>Username: </strong><span>john_doe</span></p>
+          <p><strong>Email: </strong><span>5N5Xp@example.com</span></p>
+          <p><strong>Gender: </strong><span>male</span></p>
+        </div>
       </div>
     </div>
     <footer>

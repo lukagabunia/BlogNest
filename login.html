@@ -13,12 +13,15 @@
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
     <!--js-->
     <script src="./js/app.js" defer></script>
-    <script src="./js/auth.js" defer></script>
+    <script src="./js/login.js" defer></script>
     <title>Log in</title>
   </head>
   <body>
     <header>
       <div class="container d-flex">
+        <div class="mobile-view">
+          <img src="./Assets/Icons/bars-solid (1).svg" alt="menu bar" />
+        </div>
         <a class="nav-action" href="./index.html">
           <img
             class="nav-img"
@@ -33,15 +36,11 @@
             <a href="./contact.html">Contact</a>
             <a href="./support.html">Support</a>
           </div>
-          <div>
+          <div class="authorization">
             <a href="./login.html">Login</a>
             <a href="./signup.html">Sign Up</a>
           </div>
         </nav>
-        <div class="mobile-view">
-          <span>Menu</span>
-          <img src="./Assets/Icons/bars-solid (1).svg" alt="menu bar" />
-        </div>
       </div>
     </header>
     <div class="container body-container">
@@ -85,7 +84,7 @@
             />
             <label class="checkbox-label" for="checkbox">Remember me</label>
           </div>
-          <a class="btn btn-link d-block mb-10" href="./reset.html"
+          <a class="btn btn-link d-block mb-10" href="./pass-reset.html"
             >Forget Password?</a
           >
           <button

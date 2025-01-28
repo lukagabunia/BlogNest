@@ -2,7 +2,9 @@ const logInEmail = document.getElementById("auth-email");
 const logInPassword = document.getElementById("password");
 const logInButton = document.getElementById("auth-btn");
 const authError = document.querySelector(".auth-error");
+const authorization = document.querySelector(".authorization");
 
+// Disable the login button by default
 logInButton.style.backgroundColor = "rgb(200, 200, 200)";
 logInButton.style.cursor = "not-allowed";
 logInButton.disabled = true;
@@ -29,8 +31,8 @@ logInButton.addEventListener("click", (event) => {
     logInPassword.value === "Random1234@" &&
     logInEmail.value === "example@gmail.com"
   ) {
+    localStorage.setItem("isLoggedIn", "true");
     window.location.href = "./index.html";
-    console.log("Logged in");
   } else {
     authError.style.display = "block";
     authError.style.color = "red";

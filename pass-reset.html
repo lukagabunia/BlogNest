@@ -6,14 +6,15 @@
 
     <!--Links-->
     <link rel="stylesheet" href="./Styles/style.css" />
-    <link rel="stylesheet" href="./Styles/contact.css" />
     <link rel="stylesheet" href="./Styles/responsive.css" />
+    <link rel="stylesheet" href="./Styles/pass-reset.css" />
     <!--Icons-->
     <link rel="icon" href="./Assets/Icons/egg-solid.ico" />
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
     <!--js-->
     <script src="./js/app.js" defer></script>
-    <title>Contact us</title>
+    <script src="./js/pass-reset.js" defer></script>
+    <title>Reset Password</title>
   </head>
   <body>
     <header>
@@ -47,43 +48,23 @@
         </div>
       </div>
     </header>
-    <div class="container body-container contact-container">
-      <div>
-        <h1>Contact us</h1>
-        <p>Fill out the form below to contact us</p>
+    <div class="container body-container">
+      <div class="pass-container">
+        <h1>Reset Password</h1>
+        <label for="email" class="d-block mb-10">Enter your email</label>
         <form action="">
-          <div>
-            <label for="email" class="d-block mb-10"
-              ><strong>Email</strong></label
-            >
-            <input type="email" class="contact-input d-block w-100 mb-10" />
-          </div>
-          <div>
-            <label class="d-block mb-10" for="subject"
-              ><strong>Subject</strong></label
-            >
-            <input class="contact-input d-block w-100 mb-10" type="text" />
-          </div>
-          <div>
-            <label class="d-block mb-10" for="message"
-              ><strong>Message</strong></label
-            >
-            <textarea class="w-100 mb-10" name="message"></textarea>
-          </div>
-          <button>Send</button>
+          <input
+            id="email"
+            type="email"
+            class="pass-input d-block w-100"
+            placeholder="Email"
+            required
+          />
+          <span class="email-error"></span>
+          <button id="reset-btn" type="submit" class="btn btn-reset w-100">
+            Reset
+          </button>
         </form>
-      </div>
-      <div>
-        <h2>Contact information</h2>
-        <ul>
-          <li><strong>Address:</strong> 123 Example Street</li>
-          <li><strong>Email:</strong> d3m4O@example.com</li>
-          <li><strong>Phone number:</strong> 123-456-789</li>
-          <li>
-            <strong>Facebook:</strong
-            ><a class="btn btn-link" href="#">facebook-example</a>
-          </li>
-        </ul>
       </div>
     </div>
     <footer>
