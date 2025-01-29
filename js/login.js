@@ -32,7 +32,7 @@ logInButton.addEventListener("click", (event) => {
     logInEmail.value === "example@gmail.com"
   ) {
     localStorage.setItem("isLoggedIn", "true");
-    window.location.href = "./index.html";
+    window.location.href = "./user.html";
   } else {
     authError.style.display = "block";
     authError.style.color = "red";
