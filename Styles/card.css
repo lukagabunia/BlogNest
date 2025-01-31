@@ -6,7 +6,10 @@
 }
 .img-container {
   position: relative;
+  width: 100%;
+  object-fit: cover;
 }
+
 .fav-icon {
   position: absolute;
   top: 10px;

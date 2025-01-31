@@ -3,7 +3,7 @@
     "id": 1,
     "img": "./Assets/Img/nature.jpg",
     "creation_date": "11/11/2022",
-    "title": "Nature’s Eternal Symphony",
+    "title": "Nature’s Eternal Symphony of leaves",
     "description": "The gentle rustling of leaves whispers secrets of the wind, while rivers carve timeless paths through ancient valleys. Birds sing melodies of dawn, and sunlight dances on emerald canopies. Nature thrives in harmony—mountains stand tall, oceans pulse with life, and every breath carries the scent of earth’s eternal wonder.",
     "category": "nature"
   },
@@ -43,8 +43,8 @@
     "id": 6,
     "img": "./Assets/Img/sport.jpg",
     "creation_date": "17/06/2024",
-    "title": "The Thrill of Skiing",
-    "description": "Skiing is a dance with nature, gliding over powdery slopes with the crisp mountain air rushing past. It blends adrenaline and serenity, from steep descents to peaceful trails. Whether racing down peaks or enjoying scenic runs, skiing offers adventure, freedom, and a deep connection to winter’s beauty.",
+    "title": "The Thrill of Skiing (dance with nature)",
+    "description": "Skiing is a dance with nature, gliding over powdery slopes with the crisp mountain air rushing past. It blends adrenaline and serenity, from steep descents to peaceful trails. Whether racing down peaks or enjoying scenic runs, skiing offers adventure, freedom, and a deep connection to winter’s beauty. people find strength, creating a dynamic and ever-evolving social fabric.",
     "category": "sport"
   }
 ]
