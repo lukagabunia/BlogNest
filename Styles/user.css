@@ -14,7 +14,8 @@
 .log-out-btn {
   cursor: pointer;
   border: none;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 10px;
   border-radius: 5px;
   outline: none;

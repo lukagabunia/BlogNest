@@ -1,3 +1,6 @@
+.nav-footer a:nth-child(1) {
+  text-decoration: 3px underline;
+}
 .post-main-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

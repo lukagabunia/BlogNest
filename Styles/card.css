@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .card {
-  box-shadow: 0px 3px 4px 1px purple;
+  box-shadow: 0px 3px 4px 1px black;
 }
 .img-container {
   position: relative;
@@ -51,7 +51,7 @@
 }
 .card-btn {
   color: white;
-  background-color: #8a2be2;
+  background-color: black;
   border: 0;
   padding: 10px;
   border-radius: 5px;

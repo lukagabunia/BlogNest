@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./Styles/style.css" />
     <link rel="stylesheet" href="./Styles/responsive.css" />
     <link rel="stylesheet" href="./Styles/pass-reset.css" />
+    <link rel="stylesheet" href="./Styles/color.css" />
+    <link rel="stylesheet" href="./Styles/dark-theme.css" />
     <!--Icons-->
     <link rel="icon" href="./Assets/Icons/egg-solid.ico" />
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/egg-solid.ico" />
@@ -18,36 +20,38 @@
   </head>
   <body>
     <header>
-      <div class="container d-flex">
-        <div class="mobile-view">
-          <img src="./Assets/Icons/bars-solid (1).svg" alt="menu bar" />
-        </div>
-        <a class="nav-action" href="./index.html">
-          <img
-            class="nav-img"
-            src="./Assets/Img/mug-hot-solid.svg"
-            alt="coffee"
-          />
-          <span class="nav-logo">BlogNest</span>
-        </a>
-        <nav>
-          <div>
-            <a href="./post.html">Posts</a>
-            <a href="./contact.html">Contact</a>
-            <a href="./support.html">Support</a>
-            <a href="#">Favorites</a>
+      <div class="container">
+        <div class="nav-head">
+          <a class="nav-logo" href="./index.html">
+            <img
+              class="nav-img"
+              src="./Assets/Img/mug-hot-solid.svg"
+              alt="coffee"
+            />
+            <span class="nav-logo-text">BlogNest</span>
+          </a>
+          <div class="nav-head-child">
+            <div class="authorization">
+              <a href="./login.html">Login</a>
+              <a href="./signup.html">Sign Up</a>
+            </div>
+            <div class="user-container">
+              <a href="/user.html"
+                ><img class="user-img" src="./Assets/Img/user-solid.svg" alt=""
+              /></a>
+            </div>
           </div>
-          <div class="authorization">
-            <a href="./login.html">Login</a>
-            <a href="./signup.html">Sign Up</a>
-          </div>
-        </nav>
-        <div class="user-container">
-          <a href="/user.html"
-            ><img class="user-img" src="./Assets/Img/user-solid.svg" alt=""
-          /></a>
         </div>
-      </div>
+        <div class="nav-footer">
+          <nav>
+            <div class="nav-footer-child">
+              <a href="./post.html">Posts</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./support.html">Support</a>
+              <a href="#">Favorites</a>
+            </div>
+          </nav>
+        </div>
     </header>
     <div class="container body-container">
       <div class="pass-container">

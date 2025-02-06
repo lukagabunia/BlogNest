@@ -1,5 +1,7 @@
 :root {
   --greyish: #ccc;
-  --purple: purple;
-  --white: white;
+  --NeutralWhite: #f5f5f5;
+  --SoftLavender: #d8bfd8;
+  --WarmCoral: #ff6f61;
+  --MintGreen: #98ff98;
 }

@@ -113,56 +113,13 @@
   .pass-container h1 {
     padding-bottom: 10px;
   }
-  .mobile-view {
-    display: flex;
-    color: white;
-    cursor: pointer;
-    align-items: center;
-  }
-  .mobile-view img {
-    width: 20px;
-    transition: ease-in-out 0.5s;
-  }
-  header nav {
-    display: none;
-  }
-  header nav.active {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background-color: #a4a4a4;
-    left: 0;
-    flex-direction: column;
-    padding: 4px;
-  }
-  header nav.active > div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  header nav.active > div:last-child a:last-child {
-    border-bottom: none;
-  }
-  header nav.active a {
-    padding: 5px 0;
-    border-bottom: 1px solid #ffffffbd;
-  }
-  header > .container {
-    justify-content: space-between;
-  }
-  header {
-    position: relative;
-  }
-  .nav-action {
-    padding-left: 19px;
-  }
-  .nav-action span {
-    display: none;
-  }
 }
 /* mobiles */
 @media screen and (max-width: 576px) {
+  .nav-footer {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
   .post-main-container {
     margin-top: 10px;
   }
@@ -173,53 +130,6 @@
   .post-container {
     margin-bottom: 20px;
     grid-template-columns: repeat(2, minmax(0, 0.5fr));
-  }
-  .mobile-view {
-    display: flex;
-    color: white;
-    cursor: pointer;
-    align-items: center;
-  }
-  .mobile-view img {
-    width: 20px;
-    transition: ease-in-out 0.5s;
-  }
-  header nav {
-    display: none;
-  }
-  header nav.active {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background-color: #a4a4a4;
-    left: 0;
-    flex-direction: column;
-    padding: 4px;
-  }
-  header nav.active > div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  header nav.active > div:last-child a:last-child {
-    border-bottom: none;
-  }
-  header nav.active a {
-    padding: 5px 0;
-    border-bottom: 1px solid #ffffffbd;
-  }
-  header > .container {
-    justify-content: space-between;
-  }
-  header {
-    position: relative;
-  }
-  .nav-action {
-    padding-left: 19px;
-  }
-  .nav-action span {
-    display: none;
   }
   .navigation {
     overflow-x: visible;

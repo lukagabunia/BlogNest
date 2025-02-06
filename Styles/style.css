@@ -15,54 +15,72 @@ body {
   overflow-x: hidden;
 }
 header {
-  display: flex;
-  padding: 10px;
-  background-color: hsl(271, 76%, 53%);
-  align-items: center;
+  background-color: var(--NeutralWhite);
 }
-header .container {
-  align-items: center;
+.nav-logo-text {
+  color: black;
+  margin-top: 5px;
 }
-header nav {
-  align-items: center;
-}
-.mobile-view {
-  display: none;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: calc(100% - 35px);
-}
-nav a {
-  color: white;
+.nav-logo {
   text-decoration: none;
-  padding: 0 15px;
+  font-weight: 600;
 }
-.nav-img {
-  width: 35px;
+.nav-logo img {
+  width: 30px;
 }
-.nav-action {
+.first-child {
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  gap: 0 5px;
-  /* padding-right: 15px; */
 }
 .user-container img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  cursor: pointer;
-  background: white;
-  padding: 5px;
-  display: block;
+}
+.nav-head {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+.nav-head .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-head .authorization {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+.authorization a {
+  margin-top: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.nav-footer {
+  padding: 10px;
+}
+.nav-footer-child {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+}
+.nav-footer a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+.nav-footer a:first-child {
+  padding-left: 0;
+}
+.nav-footer a:last-child {
+  padding-right: 0;
 }
 .user-container {
   display: none;
 }
-
 /* utility */
 .mb-10 {
   margin-bottom: 10px;
@@ -83,9 +101,7 @@ nav a {
   cursor: pointer;
   text-decoration: none;
 }
-
 /* featured container logic*/
-
 .container {
   margin: auto;
   width: 1024px;
@@ -94,15 +110,15 @@ nav a {
   padding: 30px 0;
   flex: 1;
 }
-
 /*footer  */
-
 footer {
-  background-color: #8a2be2;
+  border-top: black solid 1px;
+  background-color: var(--NeutralWhite);
   text-align: center;
 }
 footer p {
   margin: 0;
-  color: white;
+  color: black;
+  font-weight: 400;
   padding: 10px;
 }

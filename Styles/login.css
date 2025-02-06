@@ -1,8 +1,11 @@
+.nav-head-child a:nth-child(1) {
+  text-decoration: 3px underline;
+}
 .auth-container {
   margin: auto;
   width: 300px;
   border: 1px solid #ccc;
-  box-shadow: 0px 3px 4px 1px purple;
+  box-shadow: 0px 3px 4px 1px black;
   padding: 20px;
   border-radius: 5px;
 }
@@ -21,7 +24,7 @@
   text-decoration: underline;
 }
 .btn-primary {
-  background-color: #8a2be2;
+  background-color: black;
   color: white;
   border: 0;
   padding: 10px;
