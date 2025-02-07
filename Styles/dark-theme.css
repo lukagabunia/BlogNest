@@ -92,4 +92,11 @@
     background-color: white;
     color: black;
   }
+  .pass-container h1 {
+    color: white;
+  }
+  .btn-reset {
+    background-color: white;
+    color: black;
+  }
 }
