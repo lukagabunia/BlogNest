@@ -39,7 +39,7 @@ logInButton.addEventListener("click", (event) => {
       );
 
       if (user) {
-        // Save user info (without password) in localStorage
+        // Save user info (without: id, name, surname, password and image) in localStorage
         const { id, name, surName, password, image, ...userData } = user;
         localStorage.setItem("loggedInUser", JSON.stringify(userData));
 

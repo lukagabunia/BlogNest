@@ -24,3 +24,14 @@ if (isLoggedIn) {
   // Show the user image if it exists
   if (userImage) userImage.style.display = "block";
 }
+
+// favorite icon functionality(waiting fo future updates)
+const imgContainer = document.querySelectorAll(".img-container");
+
+imgContainer.forEach((item) => {
+  const favIcon = item.querySelector(".fav-icon");
+
+  favIcon.addEventListener("click", () => {
+    console.log("clicked");
+  });
+});

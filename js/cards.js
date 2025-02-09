@@ -33,6 +33,6 @@ function createCard(card) {
 function renderCards(cards) {
   const postContainer = document.querySelector(".post-container");
   if (postContainer) {
-    postContainer.innerHTML = cards.map(createCard).join(""); // More efficient rendering
+    postContainer.innerHTML = cards.map(createCard).join("");
   }
 }

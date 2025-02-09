@@ -11,10 +11,7 @@
 }
 .accordion-item.active .active-img {
   transform: rotate(180deg);
-}
-.active-img:hover {
   cursor: pointer;
-  transform: rotate(180deg);
 }
 .accordion-header {
   justify-content: space-between;

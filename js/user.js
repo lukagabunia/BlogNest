@@ -16,6 +16,6 @@ if (!loggedInUser) {
 }
 
 logOutButton.addEventListener("click", () => {
-  localStorage.removeItem("isLoggedIn");
+  localStorage.removeItem("loggedInUser");
   window.location.href = "./login.html";
 });
