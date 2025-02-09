@@ -99,4 +99,11 @@
     background-color: white;
     color: black;
   }
+  .log-out-btn {
+    background-color: white;
+    color: black;
+  }
+  .post-detail-container {
+    color: white;
+  }
 }

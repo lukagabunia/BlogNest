@@ -12,7 +12,7 @@ items.forEach((item) => {
 });
 
 // Check if the user is logged in
-const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+const isLoggedIn = localStorage.getItem("loggedInUser");
 
 if (isLoggedIn) {
   const authContainer = document.querySelector(".authorization");

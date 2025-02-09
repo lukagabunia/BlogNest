@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne",
+    "surName": "Graham",
+    "fullName": "Leanne Graham",
+    "sex": "female",
+    "userName": "Bret",
+    "email": "0QJ3l@example.com",
+    "password": "Test1234@",
+    "image": "..."
+  },
+  {
+    "id": 2,
+    "name": "Ervin",
+    "surName": "Howell",
+    "fullName": "Ervin Howell",
+    "sex": "male",
+    "userName": "Antonette",
+    "email": "3K0dM@example.com",
+    "password": "Random1234@",
+    "image": "..."
+  },
+  {
+    "id": 3,
+    "name": "Clementine",
+    "surName": "Savile",
+    "fullName": "Clementine Bauch",
+    "sex": "female",
+    "userName": "Samantha",
+    "email": "9bE0Y@example.com",
+    "password": "Random1234",
+    "image": "..."
+  },
+  {
+    "id": 4,
+    "name": "Patricia",
+    "surName": "Lebsack",
+    "fullName": "Patricia Lebsack",
+    "sex": "female",
+    "userName": "Karianne",
+    "email": "FtP9d@example.com",
+    "password": "Test1234",
+    "image": "..."
+  },
+  {
+    "id": 5,
+    "name": "Chelsey",
+    "surName": "Dietrich",
+    "fullName": "Chelsey Dietrich",
+    "sex": "female",
+    "userName": "Kamren",
+    "email": "2JpTt@example.com",
+    "password": "S3cr3t1234",
+    "image": "..."
+  }
+]
