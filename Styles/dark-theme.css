@@ -106,4 +106,8 @@
   .post-detail-container {
     color: white;
   }
+  .fav-amount {
+    color: black;
+    background-color: white;
+  }
 }
