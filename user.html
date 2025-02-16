@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./Styles/style.css" />
     <link rel="stylesheet" href="./Styles/responsive.css" />
     <link rel="stylesheet" href="./Styles/user.css" />
-    <link rel="stylesheet" href="./Styles/color.css" />
     <link rel="stylesheet" href="./Styles/dark-theme.css" />
     <!--Icons-->
     <link rel="icon" href="./Assets/Icons/mug-hot-solid.ico" />
@@ -62,10 +61,19 @@
           </div>
         </div>
         <div class="user-bio">
-          <h2>Welcome, <span class="user-fullName"></span>!</h2>
-          <p><strong>Username: </strong><span class="user-username"></span></p>
-          <p><strong>Email: </strong><span class="user-email"></span></p>
+          <h2>Welcome, <span class="user-fullName"></span>!</h2> 
+          <p><strong>Username: </strong><span class="user-username"></span> <button class="edit-btn">Edit</button> <button class="cancel-btn">Cancel</button></p>
+          <div class="edit-container">
+            <input type="text" class="edit-input" />
+            <button class="save-btn">Save</button>
+          </div>
+          <p><strong>Email: </strong><span class="user-email"></span> <button class="edit-btn">Edit</button> <button class="cancel-btn">Cancel</button></p>
+          <div class="edit-container">
+            <input type="email" class="edit-input" />
+            <button class="save-btn">Save</button>
+          </div>
           <p><strong>Sex: </strong><span class="user-sex"></span></p>
+          <button class="create-post"><a href="./create-post.html">Create a post</a></button>
         </div>
       </div>
     </div>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!--Links-->
+      <link rel="stylesheet" href="./Styles/style.css" />
+      <link rel="stylesheet" href="./Styles/responsive.css" />
+      <link rel="stylesheet" href="./Styles/dark-theme.css" />
+      <link rel="stylesheet" href="./Styles/create-post.css" />
+      <!--Icons-->
+      <link rel="icon" href="./Assets/Icons/mug-hot-solid.ico" />
+      <link rel="icon" type="image/xml+svg" href="./Assets/Icons/mug-hot-solid.svg" />
+      <!--js-->
+      <script src="./js/app.js" defer></script>
+    <title>Create Post</title>
+  </head>
+  <body>
+    <header>
+        <div class="container">
+          <div class="nav-head">
+            <a class="nav-logo" href="./index.html">
+              <img
+                class="nav-img"
+                src="./Assets/Icons/mug-hot-solid.svg"
+                alt="coffee"
+              />
+              <span class="nav-logo-text">BlogNest</span>
+            </a>
+            <div class="nav-head-child">
+              <div class="authorization">
+                <a href="./login.html">Login</a>
+                <a href="./signup.html">Sign Up</a>
+              </div>
+              <div class="user-container">
+                <a href="/user.html"
+                  ><img class="user-img" src="./Assets/Img/user-solid.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-footer">
+            <nav>
+              <div class="nav-footer-child">
+                <a href="./post.html">Posts</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./support.html">Support</a>
+                <a href="#" class="favorite">Favorites <span class="fav-amount">0</span></a>
+              </div>
+            </nav>
+          </div>
+      </header>
+      <div class="container body-container">
+        <div class="create-post-container">
+          <h1>Create Post</h1>
+          <form action="" method="POST">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" required />
+            </div>
+            <div class="form-group">
+              <label for="content">Content:</label>
+              <textarea id="content" name="content" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="category">Category:</label>
+              <select id="category" name="category">
+                <option value="">Select a category</option>
+                <option value="nature">Nature</option>
+                <option value="mountains">Mountains</option>
+                <option value="social">Social</option>
+                <option value="art">Art</option>
+                <option value="sport">Sport</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="image">Image:</label>
+              <input type="file" id="image" name="image" accept="image/*" />
+            </div>
+            <div class="form-group">
+              <label for="tags">Tags:</label>
+              <input type="text" id="tags" name="tags" />
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+      <footer>
+        <div class="container">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+            ipsum deleniti eaque quas, quibusdam possimus corporis consequatur
+            officia sit, et porro, quae voluptatibus odio. Saepe commodi minus
+            fugiat ipsa quas.
+          </p>
+        </div>
+      </footer>
+  </body>
+</html>

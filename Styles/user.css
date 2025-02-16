@@ -23,6 +23,9 @@
 .user-bio h2 {
   text-decoration: underline;
 }
+.user-bio {
+  position: relative;
+}
 .change-image {
   display: flex;
   flex-direction: column;
@@ -42,4 +45,49 @@
   border-radius: 5px;
   outline: none;
   width: 80px;
+}
+.edit-btn {
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  outline: none;
+  width: 80px;
+}
+.cancel-btn {
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  outline: none;
+  width: 80px;
+  display: none;
+}
+.edit-container input {
+  padding: 10px;
+}
+.edit-container {
+  display: none;
+}
+.create-post {
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 150px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.create-post a {
+  text-decoration: none;
+  color: white;
 }

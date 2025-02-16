@@ -27,7 +27,7 @@ if (isLoggedIn) {
 
 // favorite icon functionality(waiting fo future updates)
 const imgContainer = document.querySelectorAll(".img-container");
-
+console.log(imgContainer);
 imgContainer.forEach((item) => {
   const favIcon = item.querySelector(".fav-icon");
 

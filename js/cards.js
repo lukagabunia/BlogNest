@@ -14,7 +14,7 @@ function createCard(card) {
         <div class="card">
             <div class="img-container">
                 <img class="card-img w-100 d-block" src="${card.img}" alt="${card.title}" />
-                <img class="fav-icon" src="./Assets/Icons/heart-regular.svg" alt="fav icon" />
+                <img onclick="toggleFavorite(${card.id})" class="fav-icon" src="./Assets/Icons/heart-regular.svg" alt="fav icon" />
                 <span>${card.creation_date}</span>
             </div>
             <div class="card-body">
@@ -30,9 +30,7 @@ function createCard(card) {
         </div>
         `;
 }
-function renderCards(cards) {
-  const postContainer = document.querySelector(".post-container");
-  if (postContainer) {
-    postContainer.innerHTML = cards.map(createCard).join("");
-  }
+
+function toggleFavorite(cardId) {
+  console.log(cardId);
 }

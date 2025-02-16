@@ -19,3 +19,31 @@ logOutButton.addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
   window.location.href = "./login.html";
 });
+
+// edit username and email functionality
+const editButtons = document.querySelectorAll(".edit-btn");
+const cancelButtons = document.querySelectorAll(".cancel-btn");
+
+// Add event listeners to edit buttons
+editButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const editContainer = button.parentElement.nextElementSibling;
+    const cancelButton = button.nextElementSibling;
+
+    button.style.display = "none";
+    editContainer.style.display = "block";
+    cancelButton.style.display = "inline-block";
+  });
+});
+
+// Add event listeners to cancel buttons
+cancelButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const editContainer = button.parentElement.nextElementSibling;
+    const editButton = button.previousElementSibling;
+
+    button.style.display = "none";
+    editContainer.style.display = "none";
+    editButton.style.display = "inline-block";
+  });
+});
