@@ -14,7 +14,7 @@ function createCard(card) {
         <div class="card">
             <div class="img-container">
                 <img class="card-img w-100 d-block" src="${card.img}" alt="${card.title}" />
-                <img onclick="toggleFavorite(${card.id})" class="fav-icon" src="./Assets/Icons/heart-regular.svg" alt="fav icon" />
+                <img onclick="toggleFavorite(${card.id})" data-id="${card.id}" class="fav-icon" src="./Assets/Icons/heart-regular.svg" alt="fav icon" />
                 <span>${card.creation_date}</span>
             </div>
             <div class="card-body">

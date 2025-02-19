@@ -55,8 +55,9 @@
     <div class="container body-container">
       <div class="pass-container">
         <h1>Reset Password</h1>
-        <label for="email" class="d-block mb-10">Enter your email</label>
         <form action="">
+          <div class="reset-first">
+            <label for="email" class="d-block mb-10">Enter your email</label>
           <input
             id="email"
             type="email"
@@ -64,6 +65,17 @@
             placeholder="Email"
             required
           />
+          </div>
+          <div class="reset-second">
+            <label for="password">Enter new password</label>
+          <input
+            id="password"
+            type="password"
+            class="pass-input d-block w-100"
+            placeholder="Password"
+            required
+          />
+          </div>
           <span class="email-error"></span>
           <button id="reset-btn" type="submit" class="btn btn-reset w-100">
             Reset

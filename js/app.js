@@ -1,16 +1,3 @@
-// Accordion functionality, with arrow
-const items = document.querySelectorAll(".accordion-item");
-
-items.forEach((item) => {
-  const header = item.querySelector(".accordion-header");
-  const body = item.querySelector(".accordion-body");
-
-  header.addEventListener("click", () => {
-    item.classList.toggle("active");
-    body.classList.toggle("active");
-  });
-});
-
 // Check if the user is logged in
 const isLoggedIn = localStorage.getItem("loggedInUser");
 
@@ -25,13 +12,14 @@ if (isLoggedIn) {
   if (userImage) userImage.style.display = "block";
 }
 
-// favorite icon functionality(waiting fo future updates)
-const imgContainer = document.querySelectorAll(".img-container");
-console.log(imgContainer);
-imgContainer.forEach((item) => {
-  const favIcon = item.querySelector(".fav-icon");
-
-  favIcon.addEventListener("click", () => {
-    console.log("clicked");
-  });
+// Favorite functionality
+const favAmountSpan = document.querySelector(".favorite .fav-amount");
+let favCount = localStorage.getItem("favAmount");
+favAmountSpan.textContent = favCount ? favCount : 0;
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("fav-icon")) {
+    let currentFavCount = parseInt(favAmountSpan.textContent) + 1;
+    favAmountSpan.textContent = currentFavCount;
+    localStorage.setItem("favAmount", currentFavCount);
+  }
 });

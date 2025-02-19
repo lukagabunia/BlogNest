@@ -1,6 +1,8 @@
 const resetBtn = document.getElementById("reset-btn");
 const email = document.getElementById("email");
 const emailError = document.querySelector(".email-error");
+const resetEmail = document.querySelector(".reset-first");
+const resetPassword = document.querySelector(".reset-second");
 
 resetBtn.style.backgroundColor = "rgb(200, 200, 200)";
 resetBtn.style.cursor = "not-allowed";
@@ -20,13 +22,23 @@ const isChecked = () => {
 email.addEventListener("input", isChecked);
 resetBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  if (email.value === "example@gmail.com") {
-    window.location.href = "./index.html";
-  } else {
-    emailError.style.display = "block";
-    emailError.style.color = "red";
-    emailError.style.fontSize = "13px";
-    emailError.textContent = "Incorrect email";
-    console.log("Wrong email");
-  }
+  fetch("./db/user.json")
+    .then((response) => response.json())
+    .then((users) => {
+      const enteredEmail = email.value.trim();
+      const user = users.find((u) => u.email === enteredEmail);
+
+      if (user) {
+        // Save user info (without: id, name, surname, password and image) in localStorage
+        resetPassword.style.display = "block";
+        resetEmail.style.display = "none";
+      } else {
+        emailError.style.display = "block";
+        emailError.style.color = "red";
+        emailError.style.fontSize = "13px";
+        emailError.textContent = "Incorrect email";
+        console.log("Wrong email");
+      }
+    })
+    .catch((error) => console.error("Error fetching user data:", error));
 });
