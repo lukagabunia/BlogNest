@@ -19,7 +19,9 @@ function createCard(card) {
             </div>
             <div class="card-body">
                 <h3>${card.title}</h3>
+                <div class="card-text">
                 <p>${card.description}</p>
+                </div>
                 <div class="action-container d-flex">
                     <button class="btn card-btn">
                         <a href="./post-detail.html?id=${card.id}">See more...</a>
