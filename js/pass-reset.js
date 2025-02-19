@@ -32,6 +32,7 @@ resetBtn.addEventListener("click", (event) => {
         // Save user info (without: id, name, surname, password and image) in localStorage
         resetPassword.style.display = "block";
         resetEmail.style.display = "none";
+        emailError.style.display = "none";
       } else {
         emailError.style.display = "block";
         emailError.style.color = "red";
