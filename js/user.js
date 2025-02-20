@@ -45,6 +45,6 @@ cancelButtons.forEach((button) => {
 
     button.style.display = "none";
     editContainer.style.display = "none";
-    editButton.style.display = "inline-block";
+    editButton.style.display = "block";
   });
 });
