@@ -218,4 +218,19 @@
   .log-out-btn {
     font-size: 12px;
   }
+  .carousel-main {
+    position: relative;
+  }
+  .carousel-controls {
+    position: absolute;
+    top: 43%;
+  }
+  .prev,
+  .next {
+    padding-inline: 14px;
+  }
+  .container.post-detail-container h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
