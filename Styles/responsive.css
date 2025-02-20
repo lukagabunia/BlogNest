@@ -223,7 +223,8 @@
   }
   .carousel-controls {
     position: absolute;
-    top: 43%;
+    transform: translateY(-50%);
+    top: 50%;
   }
   .prev,
   .next {
