@@ -234,4 +234,11 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  .user-buttons button {
+    font-size: 12px;
+    width: 70px;
+  }
+  .user-main-container {
+    margin-bottom: 10px;
+  }
 }

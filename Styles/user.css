@@ -24,7 +24,8 @@
   text-decoration: underline;
 }
 .user-bio {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .change-image {
   display: flex;
@@ -74,7 +75,13 @@
 .edit-container {
   display: none;
 }
-.create-post {
+.user-buttons {
+  justify-content: space-between;
+  display: flex;
+  margin-top: auto;
+}
+.create-post,
+.my-posts {
   cursor: pointer;
   border: none;
   background-color: black;
@@ -83,11 +90,9 @@
   outline: none;
   width: 150px;
   font-weight: 600;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
 }
-.create-post a {
+.create-post a,
+.my-posts a {
   text-decoration: none;
   color: white;
 }
