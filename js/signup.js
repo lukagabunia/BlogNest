@@ -66,10 +66,8 @@ firstName.addEventListener("input", (e) => {
     firstNameError.style.fontSize = "13px";
     firstNameError.textContent =
       "First name must be at least 2 characters long";
-  } else if (inputValue.length === 0) {
-    firstNameError.textContent = "";
   } else {
-    firstNameError.textContent = "";
+    return (firstNameError.textContent = "");
   }
 });
 
@@ -79,10 +77,8 @@ lastName.addEventListener("input", (e) => {
     lastNameError.style.color = "red";
     lastNameError.style.fontSize = "13px";
     lastNameError.textContent = "Last name must be at least 2 characters long";
-  } else if (inputValue.length === 0) {
-    lastNameError.textContent = "";
   } else {
-    lastNameError.textContent = "";
+    return (lastNameError.textContent = "");
   }
 });
 
@@ -92,29 +88,25 @@ signUpPassword.addEventListener("input", (e) => {
     error.style.color = "red";
     error.style.fontSize = "13px";
     error.textContent = "Password must be at least 8 characters long";
-  } else if (inputValue.length === 0) {
-    error.textContent = "";
   } else {
-    error.textContent = "";
+    return (error.textContent = "");
   }
 });
-
-signUpConPassword.addEventListener("input", (e) => {
-  if (e.target.value !== signUpPassword.value) {
-    conPassError.style.color = "red";
-    conPassError.style.fontSize = "13px";
-    conPassError.textContent = "Passwords do not match";
-  } else {
-    conPassError.textContent = "";
-  }
-});
-
 signUpConEmail.addEventListener("input", (e) => {
   if (e.target.value !== signUpEmail.value) {
     conEmailError.style.color = "red";
     conEmailError.style.fontSize = "13px";
     conEmailError.textContent = "Emails do not match";
   } else {
-    conEmailError.textContent = "";
+    return (conEmailError.textContent = "");
+  }
+});
+signUpConPassword.addEventListener("input", (e) => {
+  if (e.target.value !== signUpPassword.value) {
+    conPassError.style.color = "red";
+    conPassError.style.fontSize = "13px";
+    conPassError.textContent = "Passwords do not match";
+  } else {
+    return (conPassError.textContent = "");
   }
 });

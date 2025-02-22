@@ -1,14 +1,25 @@
-// Load cards
+// Creating cards
 const postContainer = document.querySelector(".post-container");
+let allCards = [];
 
 fetch("./db/cards.json")
   .then((response) => response.json())
   .then((cards) => {
-    cards.forEach((card) => {
-      postContainer.innerHTML += createCard(card);
-    });
+    allCards = cards;
+    renderCards(cards);
   })
   .catch((error) => console.error("Error loading cards:", error));
+
+function renderCards(cards) {
+  let cardsHTML = "";
+  cards.forEach((card) => {
+    cardsHTML += createCard(card);
+  });
+  postContainer.innerHTML = cardsHTML;
+}
+function toggleFavorite(cardId) {
+  console.log(cardId);
+}
 function createCard(card) {
   return `
         <div class="card">
@@ -31,8 +42,4 @@ function createCard(card) {
             </div>
         </div>
         `;
-}
-
-function toggleFavorite(cardId) {
-  console.log(cardId);
 }

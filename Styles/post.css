@@ -4,6 +4,7 @@
 .post-main-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 118px auto;
   gap: 15px;
 }
 .categories img {

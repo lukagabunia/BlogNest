@@ -1,7 +1,15 @@
 const navigation = document.querySelector(".navigation");
-// needs future improvements
+
 document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("d-block")) {
-    console.log(event.target.textContent);
+  if (event.target.classList.contains("navigation-list")) {
+    const selectedCategory = event.target.textContent.toLowerCase();
+    if (selectedCategory === "all") {
+      renderCards(allCards);
+    } else {
+      const filteredCards = allCards.filter(
+        (card) => card.category.toLowerCase() === selectedCategory
+      );
+      renderCards(filteredCards);
+    }
   }
 });

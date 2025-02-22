@@ -29,7 +29,6 @@ resetBtn.addEventListener("click", (event) => {
       const user = users.find((u) => u.email === enteredEmail);
 
       if (user) {
-        // Save user info (without: id, name, surname, password and image) in localStorage
         resetPassword.style.display = "block";
         resetEmail.style.display = "none";
         emailError.style.display = "none";
