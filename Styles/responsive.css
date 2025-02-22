@@ -36,6 +36,9 @@
   .categories {
     padding: 10px;
   }
+  .post-main-container {
+    grid-template-rows: auto;
+  }
   .post-main-container .categories:first-child {
     grid-column: 1 / span 2;
   }
