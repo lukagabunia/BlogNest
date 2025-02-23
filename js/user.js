@@ -18,6 +18,7 @@ if (!loggedInUser) {
 logOutButton.addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
   localStorage.removeItem("favAmount");
+  localStorage.removeItem("favoritedCards");
   window.location.href = "./login.html";
 });
 
