@@ -59,6 +59,10 @@
   .categories img {
     filter: invert(1);
   }
+  .categories:hover {
+    background-color: black;
+    filter: invert(1);
+  }
   .navigation li a {
     color: white;
   }
@@ -109,5 +113,14 @@
   .fav-amount {
     color: black;
     background-color: white;
+  }
+  .popup {
+    background-color: black;
+  }
+  .popup p {
+    color: white;
+  }
+  .popup .social-media img {
+    filter: invert(1);
   }
 }

@@ -1,5 +1,8 @@
 // Creating cards
 const postContainer = document.querySelector(".post-container");
+const popUp = document.querySelector(".popup");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.getElementById("close-btn");
 let allCards = [];
 
 fetch("./db/cards.json")
@@ -37,9 +40,18 @@ function createCard(card) {
                     <button class="btn card-btn">
                         <a href="./post-detail.html?id=${card.id}">See more...</a>
                     </button>
-                    <img class="share-icon" src="./Assets/Icons/share-solid.svg" alt="share" />
+                    <img onclick="sharePost()" class="share-icon" src="./Assets/Icons/share-solid.svg" alt="share" />
                 </div>
             </div>
         </div>
         `;
 }
+function sharePost() {
+  popUp.classList.add("active");
+  overlay.classList.add("active");
+}
+
+closeBtn.addEventListener("click", () => {
+  popUp.classList.remove("active");
+  overlay.classList.remove("active");
+});
