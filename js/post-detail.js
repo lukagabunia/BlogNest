@@ -1,5 +1,4 @@
 const carouselItem = document.querySelectorAll(".carousel-item");
-const carouselControls = document.querySelectorAll(".carousel-controls");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 
@@ -12,6 +11,7 @@ if (activeIndex === -1) {
   activeIndex = 0;
   carouselArray[0].classList.add("active");
 }
+
 const updateButtonVisibility = () => {
   if (carouselArray.length === 1) {
     prev.classList.add("hide");
@@ -28,15 +28,32 @@ function updateIndex(newIndex) {
   carouselArray[activeIndex].classList.add("active");
 }
 
+function startAutoSlide() {
+  return setInterval(() => {
+    const newIndex = (getActiveIndex() + 1) % carouselArray.length;
+    updateIndex(newIndex);
+  }, 4000);
+}
+
+let slideInterval = startAutoSlide();
+
+function resetAutoSlide() {
+  clearInterval(slideInterval);
+  slideInterval = startAutoSlide();
+}
+
 prev.addEventListener("click", () => {
   const newIndex =
     (getActiveIndex() - 1 + carouselArray.length) % carouselArray.length;
   updateIndex(newIndex);
+  resetAutoSlide();
 });
 
 next.addEventListener("click", () => {
   const newIndex = (getActiveIndex() + 1) % carouselArray.length;
   updateIndex(newIndex);
+  resetAutoSlide();
 });
-
-window.onload = updateButtonVisibility;
+window.onload = () => {
+  updateButtonVisibility();
+};
