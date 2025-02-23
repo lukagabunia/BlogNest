@@ -27,7 +27,7 @@
     "id": 4,
     "img": "./Assets/Img/culture.jpg",
     "creation_date": "29/04/2019",
-    "title": "The Heartbeat of Humanity – Culture",
+    "title": "The Heartbeat of Humanity",
     "description": "Culture weaves the identity of civilizations, shaping traditions, languages, and arts. It lives in music, dance, cuisine, and stories passed through generations. From ancient rituals to modern expressions, culture unites and diversifies, reflecting the soul of humanity and the ever-evolving tapestry of our shared existence.",
     "category": "culture"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "img": "./Assets/Img/sport.jpg",
     "creation_date": "17/06/2024",
-    "title": "The Thrill of Skiing (dance with nature)",
+    "title": "The Thrill of Skiing",
     "description": "Skiing is a dance with nature, gliding over powdery slopes with the crisp mountain air rushing past. It blends adrenaline and serenity, from steep descents to peaceful trails. Whether racing down peaks or enjoying scenic runs, skiing offers adventure, freedom, and a deep connection to winter’s beauty. people find strength, creating a dynamic and ever-evolving social fabric.",
     "category": "sport"
   }

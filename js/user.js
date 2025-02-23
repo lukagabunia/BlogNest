@@ -21,11 +21,9 @@ logOutButton.addEventListener("click", () => {
   window.location.href = "./login.html";
 });
 
-// edit username and email functionality
 const editButtons = document.querySelectorAll(".edit-btn");
 const cancelButtons = document.querySelectorAll(".cancel-btn");
 
-// Add event listeners to edit buttons
 editButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const editContainer = button.parentElement.nextElementSibling;
@@ -37,7 +35,6 @@ editButtons.forEach((button) => {
   });
 });
 
-// Add event listeners to cancel buttons
 cancelButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const editContainer = button.parentElement.nextElementSibling;

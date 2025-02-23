@@ -5,10 +5,8 @@ if (isLoggedIn) {
   const authContainer = document.querySelector(".authorization");
   const userImage = document.querySelector(".user-container");
 
-  // Hide the login and signup links if they exist
   if (authContainer) authContainer.style.display = "none";
 
-  // Show the user image if it exists
   if (userImage) userImage.style.display = "block";
 }
 
@@ -16,10 +14,17 @@ if (isLoggedIn) {
 const favAmountSpan = document.querySelector(".favorite .fav-amount");
 let favCount = localStorage.getItem("favAmount");
 favAmountSpan.textContent = favCount ? favCount : 0;
+let favoritedCards = JSON.parse(localStorage.getItem("favoritedCards")) || [];
+
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("fav-icon")) {
-    let currentFavCount = parseInt(favAmountSpan.textContent) + 1;
-    favAmountSpan.textContent = currentFavCount;
-    localStorage.setItem("favAmount", currentFavCount);
+    let cardId = event.target.getAttribute("data-id");
+    if (!favoritedCards.includes(cardId)) {
+      let currentFavCount = parseInt(favAmountSpan.textContent) + 1;
+      favAmountSpan.textContent = currentFavCount;
+      localStorage.setItem("favAmount", currentFavCount);
+      favoritedCards.push(cardId);
+      localStorage.setItem("favoritedCards", JSON.stringify(favoritedCards));
+    }
   }
 });
