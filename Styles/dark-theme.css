@@ -6,6 +6,12 @@
     background-color: black;
     color: white;
   }
+  .nav-footer a::after {
+    background-color: white;
+  }
+  .nav-head-child a:after {
+    background-color: white;
+  }
   .authorization a {
     color: white;
   }
@@ -122,5 +128,11 @@
   }
   .popup .social-media img {
     filter: invert(1);
+  }
+  .categories::after {
+    background-color: grey;
+  }
+  .categories :hover {
+    filter: none;
   }
 }

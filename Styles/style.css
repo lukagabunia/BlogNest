@@ -38,9 +38,26 @@ header {
 }
 .nav-head {
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding: 10px;
   justify-content: space-between;
+}
+.nav-head-child a {
+  position: relative;
+}
+.nav-head-child a:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+.nav-head-child a:hover::after {
+  width: 100%;
 }
 .nav-head .nav-logo {
   display: flex;
@@ -60,17 +77,31 @@ header {
   font-weight: 600;
 }
 .nav-footer {
+  display: flex;
+  flex-direction: row;
   padding: 10px;
 }
 .nav-footer-child {
-  display: flex;
-  flex-direction: row;
   font-weight: 600;
 }
 .nav-footer a {
+  position: relative;
   text-decoration: none;
   color: black;
   padding: 10px;
+}
+.nav-footer a::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: 1px;
+  transition: 0.3s;
+}
+.nav-footer a:hover::after {
+  width: 100%;
 }
 .nav-footer a:first-child {
   padding-left: 0;

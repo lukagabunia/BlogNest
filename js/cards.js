@@ -49,7 +49,11 @@ function sharePost() {
   overlay.classList.add("active");
 }
 
-closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener("click", closePopup);
+function closePopup() {
   popUp.classList.remove("active");
   overlay.classList.remove("active");
+}
+overlay.addEventListener("click", () => {
+  closePopup();
 });
