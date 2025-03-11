@@ -244,4 +244,30 @@
   .user-main-container {
     margin-bottom: 10px;
   }
+  .container.body-container .create-post-container {
+    width: 100%;
+  }
+  .container.body-container .create-post-container .form-group input,
+  label {
+    width: 100%;
+  }
+  #category {
+    width: 100%;
+  }
+  .container.body-container .create-post-container form {
+    width: 100%;
+    padding-inline: 10px;
+  }
+  .container.body-container .create-post-container form textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: none;
+  }
+  .container.body-container .create-post-container form button {
+    width: 100%;
+  }
+  .create-post-container h1 {
+    font-size: 25px;
+    margin-top: 5px;
+  }
 }
