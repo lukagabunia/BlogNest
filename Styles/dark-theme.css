@@ -5,6 +5,7 @@
   header {
     background-color: black;
     color: white;
+    border-color: white;
   }
   .nav-footer a::after {
     background-color: white;
