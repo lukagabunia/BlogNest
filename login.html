@@ -53,62 +53,64 @@
         </div>
     </header>
     <div class="container body-container">
-      <div class="auth-container">
-        <h1>Log in</h1>
-        <form action="" method="get">
-          <div>
-            <label class="auth-label d-block mb-10" for="auth-email"
-              >Email</label
+      <section id="login">
+        <div class="auth-container">
+          <h1>Log in</h1>
+          <form action="" method="get">
+            <div>
+              <label class="auth-label d-block mb-10" for="auth-email"
+                >Email</label
+              >
+              <input
+                class="auth-input d-block mb-10 w-100"
+                type="email"
+                name="email"
+                id="auth-email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div>
+              <label class="auth-label d-block mb-10" for="password"
+                >Password</label
+              >
+              <input
+                class="auth-input d-block w-100 mb-10"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <span class="auth-error"></span>
+            </div>
+            <div class="mb-10">
+              <input
+                class="checkbox-input"
+                type="checkbox"
+                name="checkbox"
+                id="checkbox"
+              />
+              <label class="checkbox-label" for="checkbox">Remember me</label>
+            </div>
+            <a class="btn btn-link d-block mb-10" href="./pass-reset.html"
+              >Forget Password?</a
             >
-            <input
-              class="auth-input d-block mb-10 w-100"
-              type="email"
-              name="email"
-              id="auth-email"
-              placeholder="Enter your email"
-              autocomplete="email"
-              required
-            />
-          </div>
-          <div>
-            <label class="auth-label d-block mb-10" for="password"
-              >Password</label
+            <button
+              id="auth-btn"
+              class="btn btn-primary d-block w-100 mb-10"
+              type="submit"
             >
-            <input
-              class="auth-input d-block w-100 mb-10"
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Enter your password"
-              required
-            />
-            <span class="auth-error"></span>
-          </div>
-          <div class="mb-10">
-            <input
-              class="checkbox-input"
-              type="checkbox"
-              name="checkbox"
-              id="checkbox"
-            />
-            <label class="checkbox-label" for="checkbox">Remember me</label>
-          </div>
-          <a class="btn btn-link d-block mb-10" href="./pass-reset.html"
-            >Forget Password?</a
-          >
-          <button
-            id="auth-btn"
-            class="btn btn-primary d-block w-100 mb-10"
-            type="submit"
-          >
-            Login
-          </button>
-          <p class="d-block">
-            Don't have an account?
-            <a class="btn btn-link mb-10" href="./signup.html">Sign Up now!</a>
-          </p>
-        </form>
-      </div>
+              Login
+            </button>
+            <p class="d-block">
+              Don't have an account?
+              <a class="btn btn-link mb-10" href="./signup.html">Sign Up now!</a>
+            </p>
+          </form>
+        </div>
+      </section>
     </div>
     <footer>
       <div class="container">

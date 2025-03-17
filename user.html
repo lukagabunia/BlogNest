@@ -52,32 +52,36 @@
     </header>
     <div class="container body-container">
       <div class="user-main-container">
-        <div class="user-portfolio">
-          <img src="./Assets/Img/user-solid.svg" alt="" />
-          <div class="change-image">
-            <label for="file">Change image</label>
-            <input type="file" id="file" />
-            <button class="save-btn">Save</button>
-          </div>
-        </div>
-        <div class="user-bio">
-          <h2>Welcome, <span class="user-fullName"></span>!</h2> 
-          <p><strong>Username: </strong><span class="user-username"></span> <button class="edit-btn">Edit</button> <button class="cancel-btn">Cancel</button></p>
-          <div class="edit-container">
-            <input type="text" class="edit-input" />
-            <button class="save-btn">Save</button>
-          </div>
-          <p><strong>Email: </strong><span class="user-email"></span> <button class="edit-btn">Edit</button> <button class="cancel-btn">Cancel</button></p>
-          <div class="edit-container">
-            <input type="email" class="edit-input" />
-            <button class="save-btn">Save</button>
-          </div>
-          <p><strong>Sex: </strong><span class="user-sex"></span></p>
-            <div class="user-buttons">
-              <button class="my-posts"><a href="#">My posts</a></button>
-              <button class="create-post"><a href="./create-post.html">Create a post</a></button>
+        <section id="user-profile">
+          <div class="user-portfolio">
+            <img src="./Assets/Img/user-solid.svg" alt="" />
+            <div class="change-image">
+              <label for="file">Change image</label>
+              <input type="file" id="file" />
+              <button class="save-btn">Save</button>
             </div>
-        </div>
+          </div>
+        </section>
+        <section id="user-info">
+          <div class="user-bio">
+            <h2>Welcome, <span class="user-fullName"></span>!</h2> 
+            <p><strong>Username: </strong><span class="user-username"></span> <button class="edit-btn">Edit</button> <button class="cancel-btn">Cancel</button></p>
+            <div class="edit-container">
+              <input type="text" class="edit-input" />
+              <button class="save-btn">Save</button>
+            </div>
+            <p><strong>Email: </strong><span class="user-email"></span> <button class="edit-btn">Edit</button> <button class="cancel-btn">Cancel</button></p>
+            <div class="edit-container">
+              <input type="email" class="edit-input" />
+              <button class="save-btn">Save</button>
+            </div>
+            <p><strong>Sex: </strong><span class="user-sex"></span></p>
+              <div class="user-buttons">
+                <button class="my-posts"><a href="#">My posts</a></button>
+                <button class="create-post"><a href="./create-post.html">Create a post</a></button>
+              </div>
+          </div>
+        </section>
       </div>
     </div>
     <footer>

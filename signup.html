@@ -53,127 +53,129 @@
         </div>
     </header>
     <div class="container body-container">
-      <div class="reg-container">
-        <h1>Sign up</h1>
-        <form action="" method="get">
-          <div>
-            <label for="first-name" class="first-name d-block mb-5"
-              >Enter your first name</label
+      <section id="signup">
+        <div class="reg-container">
+          <h1>Sign up</h1>
+          <form action="" method="get">
+            <div>
+              <label for="first-name" class="first-name d-block mb-5"
+                >Enter your first name</label
+              >
+              <input
+                id="first-name"
+                type="text"
+                class="signUp-input d-block w-100 mb-10"
+                placeholder="First name"
+                autocomplete="name"
+                required
+              />
+              <span class="firstname-error"></span>
+            </div>
+            <div>
+              <label for="last-name" class="last-name d-block mb-5"
+                >Enter your last name</label
+              >
+              <input
+                id="last-name"
+                type="text"
+                class="signUp-input d-block w-100 mb-10"
+                placeholder="Last name"
+                required
+              />
+              <span class="lastname-error"></span>
+            </div>
+            <div>
+              <label for="email" class="d-block mb-5">Enter your email</label>
+              <input
+                id="email"
+                type="email"
+                class="signUp-input d-block w-100 mb-10"
+                placeholder="Email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div>
+              <label for="con-email" class="d-block mb-5"
+                >Confirm your email</label
+              >
+              <input
+                id="con-email"
+                type="email"
+                class="signUp-input d-block w-100 mb-10"
+                placeholder="Confirm your email"
+                autocomplete="off"
+                required
+              />
+              <span class="con-email-error"></span>
+            </div>
+            <label for="gender" class="d-block mb-10">Select your gender</label>
+            <div class="gender mb-10" id="gender">
+              <input
+                id="male"
+                type="radio"
+                class="signUp-input-gender"
+                autocomplete="off"
+                title="male"
+                required
+              />
+              <label for="gender">Man</label>
+              <input
+                id="female"
+                type="radio"
+                class="signUp-input-gender"
+                autocomplete="off"
+                title="female"
+                required
+              />
+              <label for="gender">Women</label>
+            </div>
+            <div>
+              <label for="pass" class="d-block mb-5">Enter your password</label>
+              <input
+                id="pass"
+                type="password"
+                class="signUp-input d-block w-100 mb-10"
+                placeholder="Password"
+                autocomplete="off"
+                required
+              />
+              <span class="error"></span>
+            </div>
+            <div>
+              <label for="con-pass" class="d-block mb-5"
+                >Confirm your password</label
+              >
+              <input
+                id="con-pass"
+                type="password"
+                class="signUp-input d-block w-100 mb-10"
+                placeholder="Confirm your password"
+                autocomplete="off"
+                required
+              />
+              <span class="con-error"></span>
+            </div>
+            <div class="d-block mb-10">
+              <input id="remember" type="checkbox" />
+              <label for="remember">Remember me</label>
+            </div>
+            <button
+              id="signup-btn"
+              class="btn btn-reset w-100 mb-10"
+              type="submit"
             >
-            <input
-              id="first-name"
-              type="text"
-              class="signUp-input d-block w-100 mb-10"
-              placeholder="First name"
-              autocomplete="name"
-              required
-            />
-            <span class="firstname-error"></span>
-          </div>
-          <div>
-            <label for="last-name" class="last-name d-block mb-5"
-              >Enter your last name</label
-            >
-            <input
-              id="last-name"
-              type="text"
-              class="signUp-input d-block w-100 mb-10"
-              placeholder="Last name"
-              required
-            />
-            <span class="lastname-error"></span>
-          </div>
-          <div>
-            <label for="email" class="d-block mb-5">Enter your email</label>
-            <input
-              id="email"
-              type="email"
-              class="signUp-input d-block w-100 mb-10"
-              placeholder="Email"
-              autocomplete="email"
-              required
-            />
-          </div>
-          <div>
-            <label for="con-email" class="d-block mb-5"
-              >Confirm your email</label
-            >
-            <input
-              id="con-email"
-              type="email"
-              class="signUp-input d-block w-100 mb-10"
-              placeholder="Confirm your email"
-              autocomplete="off"
-              required
-            />
-            <span class="con-email-error"></span>
-          </div>
-          <label for="gender" class="d-block mb-10">Select your gender</label>
-          <div class="gender mb-10" id="gender">
-            <input
-              id="male"
-              type="radio"
-              class="signUp-input-gender"
-              autocomplete="off"
-              title="male"
-              required
-            />
-            <label for="gender">Man</label>
-            <input
-              id="female"
-              type="radio"
-              class="signUp-input-gender"
-              autocomplete="off"
-              title="female"
-              required
-            />
-            <label for="gender">Women</label>
-          </div>
-          <div>
-            <label for="pass" class="d-block mb-5">Enter your password</label>
-            <input
-              id="pass"
-              type="password"
-              class="signUp-input d-block w-100 mb-10"
-              placeholder="Password"
-              autocomplete="off"
-              required
-            />
-            <span class="error"></span>
-          </div>
-          <div>
-            <label for="con-pass" class="d-block mb-5"
-              >Confirm your password</label
-            >
-            <input
-              id="con-pass"
-              type="password"
-              class="signUp-input d-block w-100 mb-10"
-              placeholder="Confirm your password"
-              autocomplete="off"
-              required
-            />
-            <span class="con-error"></span>
-          </div>
+              Sign up
+            </button>
+          </form>
           <div class="d-block mb-10">
-            <input id="remember" type="checkbox" />
-            <label for="remember">Remember me</label>
+            <p>
+              Already have an account?
+              <a class="btn btn-link" href="./login.html">Log in</a>
+            </p>
           </div>
-          <button
-            id="signup-btn"
-            class="btn btn-reset w-100 mb-10"
-            type="submit"
-          >
-            Sign up
-          </button>
-        </form>
-        <div class="d-block mb-10">
-          <p>
-            Already have an account?
-            <a class="btn btn-link" href="./login.html">Log in</a>
-          </p>
         </div>
-      </div>
+      </section>
     </div>
     <footer>
       <div class="container">

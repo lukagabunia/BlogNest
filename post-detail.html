@@ -14,10 +14,26 @@
     <link rel="icon" type="image/xml+svg" href="./Assets/Icons/mug-hot-solid.svg" />
     <!--js-->
     <script src="./js/app.js" defer></script>
+    <script src="./js/cards.js" defer></script>
     <script src="./js/post-detail.js" defer></script>
     <title>Details</title>
   </head>
   <body>
+    <div class="popup">
+      <p>Share this post</p>
+      <button id="close-btn">X</button>
+      <div class="social-media">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="./Assets/Icons/facebook-brands.svg" alt="facebook" />
+        </a>
+        <a href="https://discord.com/" target="_blank">
+          <img src="./Assets/Icons/discord-brands.svg" alt="twitter" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="./Assets/Icons/instagram-brands.svg" alt="instagram" />
+        </a>
+      </div>
+    </div><div class="overlay"></div>
     <header>
       <div class="container">
         <div class="nav-head">
@@ -53,7 +69,8 @@
         </div>
     </header>
     <div class="container post-detail-container">
-      <div class="carousel-main">
+      <section id="carousel">
+        <div class="carousel-main">
         <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="https://images.unsplash.com/photo-1719937206109-7f4e933230c8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
@@ -70,8 +87,9 @@
           <button class="next">></button>
         </div>
       </div>
-
-      <h2>Title</h2>
+      </section>
+      <section id="post-info">
+        <h2>Title</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
         nisi sed eius qui dignissimos sunt suscipit esse! Sequi quae facilis
@@ -90,8 +108,10 @@
         Sequi quae facilis molestiae eaque animi rem libero fugiat cumque
         reprehenderit, accusantium ipsam?
       </p>
-      <h2 class="similar-title">Similar Posts</h2>
-      <div class="similar-container">
+      </section>
+      <section id="similar-posts">
+        <h2 class="similar-title">Similar Posts</h2>
+         <div class="similar-container">
           <h2>Similar Posts</h2>
           <div class="card">
             <div class="img-container">
@@ -122,6 +142,7 @@
                   <a href="./post-detail.html">See more...</a>
                 </button>
                 <img
+                onclick="sharePost()"
                   class="share-icon"
                   src="./Assets/Icons/share-solid.svg"
                   alt="share"
@@ -158,6 +179,7 @@
                   <a href="./post-detail.html">See more...</a>
                 </button>
                 <img
+                onclick="sharePost()"
                   class="share-icon"
                   src="./Assets/Icons/share-solid.svg"
                   alt="share"
@@ -194,6 +216,7 @@
                   <a href="./post-detail.html">See more...</a>
                 </button>
                 <img
+                onclick="sharePost()"
                   class="share-icon"
                   src="./Assets/Icons/share-solid.svg"
                   alt="share"
@@ -230,6 +253,7 @@
                   <a href="./post-detail.html">See more...</a>
                 </button>
                 <img
+                onclick="sharePost()"
                   class="share-icon"
                   src="./Assets/Icons/share-solid.svg"
                   alt="share"
@@ -238,6 +262,7 @@
             </div>
           </div>
         </div>
+      </section>
       </div>
     </div>
     <footer>
