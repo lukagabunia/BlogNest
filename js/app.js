@@ -1,6 +1,5 @@
 // Check if the user is logged in
 const isLoggedIn = localStorage.getItem("loggedInUser");
-const oneDay = 86400000;
 
 if (isLoggedIn) {
   const authContainer = document.querySelector(".authorization");
@@ -9,9 +8,6 @@ if (isLoggedIn) {
   if (authContainer) authContainer.style.display = "none";
 
   if (userImage) userImage.style.display = "block";
-  setTimeout(() => {
-    localStorage.removeItem("loggedInUser");
-  }, oneDay);
 }
 
 // Favorite functionality
