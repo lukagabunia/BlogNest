@@ -1,59 +1,54 @@
-const carouselItem = document.querySelectorAll(".carousel-item");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
+const carouselItems = $(".carousel-item");
+const prev = $(".prev");
+const next = $(".next");
 
-const carouselArray = Array.from(carouselItem);
-const getActiveIndex = () =>
-  carouselArray.findIndex((item) => item.classList.contains("active"));
-let activeIndex = getActiveIndex();
-
-if (activeIndex === -1) {
-  activeIndex = 0;
-  carouselArray[0].classList.add("active");
+if ($(".carousel-item.active").length === 0) {
+  carouselItems.first().addClass("active");
 }
 
+const getActiveIndex = () => {
+  return carouselItems.index($(".carousel-item.active"));
+};
+
+const updateIndex = (newIndex) => {
+  carouselItems.removeClass("active").eq(newIndex).addClass("active");
+};
+
 const updateButtonVisibility = () => {
-  if (carouselArray.length === 1) {
-    prev.classList.add("hide");
-    next.classList.add("hide");
+  if (carouselItems.length === 1) {
+    prev.addClass("hide");
+    next.addClass("hide");
   } else {
-    prev.classList.remove("hide");
-    next.classList.remove("hide");
+    prev.removeClass("hide");
+    next.removeClass("hide");
   }
 };
 
-function updateIndex(newIndex) {
-  carouselArray[getActiveIndex()].classList.remove("active");
-  activeIndex = newIndex;
-  carouselArray[activeIndex].classList.add("active");
-}
-
-function startAutoSlide() {
+const startAutoSlide = () => {
   return setInterval(() => {
-    const newIndex = (getActiveIndex() + 1) % carouselArray.length;
+    const newIndex = (getActiveIndex() + 1) % carouselItems.length;
     updateIndex(newIndex);
   }, 4000);
-}
+};
 
 let slideInterval = startAutoSlide();
 
-function resetAutoSlide() {
+const resetAutoSlide = () => {
   clearInterval(slideInterval);
   slideInterval = startAutoSlide();
-}
-
-prev.addEventListener("click", () => {
-  const newIndex =
-    (getActiveIndex() - 1 + carouselArray.length) % carouselArray.length;
-  updateIndex(newIndex);
-  resetAutoSlide();
-});
-
-next.addEventListener("click", () => {
-  const newIndex = (getActiveIndex() + 1) % carouselArray.length;
-  updateIndex(newIndex);
-  resetAutoSlide();
-});
-window.onload = () => {
-  updateButtonVisibility();
 };
+
+prev.on("click", () => {
+  const newIndex =
+    (getActiveIndex() - 1 + carouselItems.length) % carouselItems.length;
+  updateIndex(newIndex);
+  resetAutoSlide();
+});
+
+next.on("click", () => {
+  const newIndex = (getActiveIndex() + 1) % carouselItems.length;
+  updateIndex(newIndex);
+  resetAutoSlide();
+});
+
+updateButtonVisibility();

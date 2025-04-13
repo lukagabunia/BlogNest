@@ -108,6 +108,10 @@
   color: red;
   border: none;
   background: none;
+  transition: 1s;
+}
+.popup #close-btn:hover {
+  transform: rotate(180deg);
 }
 .social-media {
   align-items: center;
@@ -120,8 +124,11 @@
   width: 45px;
   cursor: pointer;
 }
+.social-media a {
+  transition: 0.5s;
+}
 .social-media a:hover {
-  transform: translateY(-10%);
+  transform: translateY(-15%);
 }
 .card-btn a {
   text-decoration: none;

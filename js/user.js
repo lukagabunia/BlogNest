@@ -1,48 +1,43 @@
-const userFullName = document.querySelector(".user-fullName");
-const userUserName = document.querySelector(".user-username");
-const userEmail = document.querySelector(".user-email");
-const userSex = document.querySelector(".user-sex");
-const logOutButton = document.querySelector(".log-out-btn");
+const userFullName = $(".user-fullName");
+const userUserName = $(".user-username");
+const userEmail = $(".user-email");
+const userSex = $(".user-sex");
+const logOutButton = $(".log-out-btn");
+const editButton = $(".edit-btn");
+const cancelButton = $(".cancel-btn");
 
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 if (!loggedInUser) {
-  window.location.href = "./login.html"; // Redirect if not logged in
+  window.location.href = "/login"; // Redirect if not logged in
 } else {
-  userFullName.textContent = loggedInUser.fullName;
-  userUserName.textContent = loggedInUser.userName;
-  userEmail.textContent = loggedInUser.email;
-  userSex.textContent = loggedInUser.sex;
+  userFullName.text(loggedInUser.fullName);
+  userUserName.text(loggedInUser.userName);
+  userEmail.text(loggedInUser.email);
+  userSex.text(loggedInUser.sex);
 }
 
-logOutButton.addEventListener("click", () => {
+logOutButton.on("click", function () {
   localStorage.removeItem("loggedInUser");
   localStorage.removeItem("favAmount");
   localStorage.removeItem("favoritedCards");
-  window.location.href = "./login.html";
+  window.location.href = "/login";
 });
 
-const editButtons = document.querySelectorAll(".edit-btn");
-const cancelButtons = document.querySelectorAll(".cancel-btn");
+editButton.on("click", function () {
+  const editContainer = $(this).parent().next();
+  const cancelButton = $(this).next();
 
-editButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const editContainer = button.parentElement.nextElementSibling;
-    const cancelButton = button.nextElementSibling;
-
-    button.style.display = "none";
-    editContainer.style.display = "block";
-    cancelButton.style.display = "inline-block";
-  });
+  $(this).hide();
+  editContainer.show();
+  cancelButton.css("display", "inline-block");
 });
 
-cancelButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const editContainer = button.parentElement.nextElementSibling;
-    const editButton = button.previousElementSibling;
+cancelButton.on("click", function () {
+  const editContainer = $(this).parent().next();
+  const editButton = $(this).prev();
 
-    button.style.display = "none";
-    editContainer.style.display = "none";
-    editButton.style.display = "block";
-  });
+  $(this).hide();
+  editContainer.hide();
+  editButton.show();
 });

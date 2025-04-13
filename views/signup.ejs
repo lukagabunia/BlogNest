@@ -5,64 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--Links-->
-    <link rel="stylesheet" href="./Styles/style.css" />
-    <link rel="stylesheet" href="./Styles/signup.css" />
-    <link rel="stylesheet" href="./Styles/responsive.css" />
-    <link rel="stylesheet" href="./Styles/dark-theme.css" />
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/signup.css" />
+    <link rel="stylesheet" href="../Styles/responsive.css" />
+    <link rel="stylesheet" href="../Styles/dark-theme.css" />
     <!--Icons-->
-    <link rel="icon" href="./Assets/Icons/mug-hot-solid.ico" />
-    <link rel="icon" type="image/xml+svg" href="./Assets/Icons/mug-hot-solid.svg" />
+    <link rel="icon" href="/Assets/Icons/mug-hot-solid.ico" />
+    <link
+      rel="icon"
+      type="image/xml+svg"
+      href="/Assets/Icons/mug-hot-solid.svg"
+    />
     <!--js-->
-    <script src="./js/app.js" defer></script>
-    <script src="./js/signup.js" defer></script>
+    <script src="../js/app.js" defer></script>
+    <script src="../js/signup.js" defer></script>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Sign up</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="nav-head">
-          <a class="nav-logo" href="./index.html">
-            <img
-              class="nav-img"
-              src="./Assets/Icons/mug-hot-solid.svg"
-              alt="coffee"
-            />
-            <span class="nav-logo-text">BlogNest</span>
-          </a>
-          <div class="nav-head-child">
-            <div class="authorization">
-              <a href="./login.html">Login</a>
-              <a href="./signup.html">Sign Up</a>
-            </div>
-            <div class="user-container ignore">
-              <a href="./user.html"
-                ><img class="user-img" src="./Assets/Img/user-solid.svg" alt=""
-              /></a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-footer">
-          <nav>
-            <div class="nav-footer-child">
-              <a href="./post.html">Posts</a>
-              <a href="./contact.html">Contact</a>
-              <a href="./support.html">Support</a>
-              <a href="#" class="favorite">Favorites <span class="fav-amount">0</span></a>
-            </div>
-          </nav>
-        </div>
-    </header>
+    <%- include('partials/header.ejs') %>
     <div class="container body-container">
       <section id="signup">
         <div class="reg-container">
           <h1>Sign up</h1>
-          <form action="" method="get">
+          <form action="/signup/submit" method="post">
             <div>
               <label for="first-name" class="first-name d-block mb-5"
                 >Enter your first name</label
               >
               <input
                 id="first-name"
+                name="first-name"
                 type="text"
                 class="signUp-input d-block w-100 mb-10"
                 placeholder="First name"
@@ -77,6 +51,7 @@
               >
               <input
                 id="last-name"
+                name="last-name"
                 type="text"
                 class="signUp-input d-block w-100 mb-10"
                 placeholder="Last name"
@@ -87,6 +62,7 @@
             <div>
               <label for="email" class="d-block mb-5">Enter your email</label>
               <input
+                name="email"
                 id="email"
                 type="email"
                 class="signUp-input d-block w-100 mb-10"
@@ -101,6 +77,7 @@
               >
               <input
                 id="con-email"
+                name="con-email"
                 type="email"
                 class="signUp-input d-block w-100 mb-10"
                 placeholder="Confirm your email"
@@ -113,6 +90,7 @@
             <div class="gender mb-10" id="gender">
               <input
                 id="male"
+                name="gender"
                 type="radio"
                 class="signUp-input-gender"
                 autocomplete="off"
@@ -121,6 +99,7 @@
               />
               <label for="gender">Man</label>
               <input
+                name="gender"
                 id="female"
                 type="radio"
                 class="signUp-input-gender"
@@ -134,6 +113,7 @@
               <label for="pass" class="d-block mb-5">Enter your password</label>
               <input
                 id="pass"
+                name="pass"
                 type="password"
                 class="signUp-input d-block w-100 mb-10"
                 placeholder="Password"
@@ -148,6 +128,7 @@
               >
               <input
                 id="con-pass"
+                name="con-pass"
                 type="password"
                 class="signUp-input d-block w-100 mb-10"
                 placeholder="Confirm your password"
@@ -171,18 +152,12 @@
           <div class="d-block mb-10">
             <p>
               Already have an account?
-              <a class="btn btn-link" href="./login.html">Log in</a>
+              <a class="btn btn-link" href="/login">Log in</a>
             </p>
           </div>
         </div>
       </section>
     </div>
-    <footer>
-      <div class="container">
-        <p>
-          © 2024 - 2025 All Rights Reserved
-        </p>
-      </div>
-    </footer>
+    <%- include('partials/footer.ejs') %>
   </body>
 </html>

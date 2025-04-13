@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Links-->
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/responsive.css" />
+    <link rel="stylesheet" href="../Styles/main.css" />
+    <link rel="stylesheet" href="../Styles/dark-theme.css" />
+    <!--Icons-->
+    <link rel="icon" href="/Assets/Icons/mug-hot-solid.ico" />
+    <link rel="icon" type="image/xml+svg" href="/Assets/Icons/mug-hot-solid.svg" />
+    <!--js-->
+    <script src="../js/app.js" defer></script>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>BlogNest</title>
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <div class="main-container container">
+      <div class="hero-container">
+        <div class="action">
+            <h1>
+              Welcome to <span class="highlight">BlogNest</span> Discover, share, and connect
+              through stories that inspire. Dive into a world of ideas and
+              perspectives on topics that matter to you.
+            </h1>
+            <br />
+            <h2>✨ Why Join Us?</h2>
+            <ul>
+              <li>Share your unique voice with the world.</li>
+              <li>Discover diverse perspectives from passionate writers.</li>
+              <li>
+                Connect and engage with a community of like-minded individuals.
+              </li>
+            </ul>
+            <h3>Ready to start your journey? </h3>👉
+            <a class="btn btn-link" href="signup.html">Sign Up Now!  </a>
+            <span>or</span>
+            <a class="btn btn-link" href="post.html"> Explore Posts</a>
+            <h4>Let’s make every story count!</h3>
+        </div>
+      </div>
+      <div class="main-img-container">
+        <img
+          class="main-img"
+          src="../Assets/Img/main-img.jpg"
+          alt="main-img"
+        />
+      </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

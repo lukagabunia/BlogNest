@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Links-->
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/responsive.css" />
+    <link rel="stylesheet" href="../Styles/pass-reset.css" />
+    <link rel="stylesheet" href="../Styles/dark-theme.css" />
+    <!--Icons-->
+    <link rel="icon" href="/Assets/Icons/mug-hot-solid.ico" />
+    <link
+      rel="icon"
+      type="image/xml+svg"
+      href="/Assets/Icons/mug-hot-solid.svg"
+    />
+    <!--js-->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/pass-reset.js" defer></script>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Reset Password</title>
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <div class="container body-container">
+      <section id="pass-reset">
+        <div class="pass-container">
+          <h1>Reset Password</h1>
+          <form action="">
+            <div class="reset-first">
+              <label for="email" class="d-block mb-10">Enter your email</label>
+              <input
+                id="email"
+                type="email"
+                class="pass-input d-block w-100"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="reset-second">
+              <label for="password">Enter new password</label>
+              <input
+                id="password"
+                type="password"
+                class="pass-input d-block w-100"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <span class="email-error"></span>
+            <button id="reset-btn" type="submit" class="btn btn-reset w-100">
+              Reset
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

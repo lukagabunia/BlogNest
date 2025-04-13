@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Links-->
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/post.css" />
+    <link rel="stylesheet" href="../Styles/responsive.css" />
+    <link rel="stylesheet" href="../Styles/dark-theme.css" />
+    <!--Icons-->
+    <link rel="icon" href="/Assets/Icons/mug-hot-solid.ico" />
+    <link
+      rel="icon"
+      type="image/xml+svg"
+      href="/Assets/Icons/mug-hot-solid.svg"
+    />
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--js-->
+    <script src="../js/post.js" defer></script>
+    <script src="../js/cards.js" defer></script>
+    <script src="../js/app.js" defer></script>
+    <title>Posts</title>
+  </head>
+  <style>
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(165, 165, 165, 0.8);
+      backdrop-filter: blur(5px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .spinner {
+      width: 55px;
+      height: 55px;
+      border: 5px solid rgba(0, 0, 0, 0.1);
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    .loading-text {
+      margin-top: 5px;
+      animation: textOpacity 2s ease-in-out infinite;
+    }
+    .loading-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes textOpacity {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 0;
+      }
+      75% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("loading");
+
+      setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+      }, 2000);
+    });
+  </script>
+  <body>
+    <div class="popup">
+      <p>Share this post</p>
+      <button id="close-btn">X</button>
+      <div class="social-media">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="../Assets/Icons/facebook-brands.svg" alt="facebook" />
+        </a>
+        <a href="https://discord.com/" target="_blank">
+          <img src="../Assets/Icons/discord-brands.svg" alt="twitter" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="../Assets/Icons/instagram-brands.svg" alt="instagram" />
+        </a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div id="loading-screen">
+      <div class="loading-box">
+        <div class="spinner"></div>
+        <div class="loading-text">
+          <em><h4>Loading Please Wait!</h4></em>
+        </div>
+      </div>
+    </div>
+    <%- include('partials/header.ejs') %>
+    <div class="container body-container post-main-container">
+      <a class="categories" href="#">
+        <img src="../Assets/Img/globe-solid.svg" alt="global" />
+        <h3>Global</h3>
+      </a>
+      <a class="categories" href="#">
+        <img src="../Assets/Img/futbol-solid.svg" alt="sport" />
+        <h3>Sport</h3>
+      </a>
+      <a class="categories" href="#">
+        <img src="../Assets/Img/palette-solid.svg" alt="art" />
+        <h3>Art</h3>
+      </a>
+      <a class="categories" href="#">
+        <img src="../Assets/Img/people-group-solid.svg" alt="social" />
+        <h3>Social</h3>
+      </a>
+      <ul class="navigation">
+        <li><a href="#" class="d-block navigation-list">Space</a></li>
+        <li><a href="#" class="d-block navigation-list">Nature</a></li>
+        <li><a href="#" class="d-block navigation-list">Social</a></li>
+        <li><a href="#" class="d-block navigation-list">Culture</a></li>
+        <li><a href="#" class="d-block navigation-list">Sport</a></li>
+        <li><a href="#" class="d-block navigation-list">Mountains</a></li>
+        <li><a href="#" class="d-block navigation-list">All</a></li>
+      </ul>
+      <div class="post-container"></div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

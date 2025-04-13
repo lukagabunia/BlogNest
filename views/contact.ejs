@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Links-->
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/contact.css" />
+    <link rel="stylesheet" href="../Styles/responsive.css" />
+    <link rel="stylesheet" href="../Styles/dark-theme.css" />
+    <!--Icons-->
+    <link rel="icon" href="../Assets/Icons/mug-hot-solid.ico" />
+    <link
+      rel="icon"
+      type="image/xml+svg"
+      href="../Assets/Icons/mug-hot-solid.svg"
+    />
+    <!--js-->
+    <script src="../js/app.js" defer></script>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Contact us</title>
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <div class="container body-container contact-container">
+      <section id="contact-form">
+        <div>
+          <h1>Contact us</h1>
+          <p>Fill out the form below to contact us</p>
+          <form action="/contact-submit" method="post">
+            <div>
+              <label for="email" class="d-block mb-10"
+                ><strong>Email</strong></label
+              >
+              <input
+                type="email"
+                name="email"
+                class="contact-input d-block w-100 mb-10"
+              />
+            </div>
+            <div>
+              <label class="d-block mb-10" for="subject"
+                ><strong>Subject</strong></label
+              >
+              <input
+                name="subject"
+                class="contact-input d-block w-100 mb-10"
+                type="text"
+              />
+            </div>
+            <div>
+              <label class="d-block mb-10" for="message"
+                ><strong>Message</strong></label
+              >
+              <textarea class="w-100 mb-10" name="message"></textarea>
+            </div>
+            <button type="submit" class="contact-btn">Send</button>
+          </form>
+        </div>
+      </section>
+      <section id="contact-info">
+        <div>
+          <h2>Contact information</h2>
+          <ul>
+            <li><strong>Address:</strong> 123 Example Street</li>
+            <li><strong>Email:</strong> d3m4O@example.com</li>
+            <li><strong>Phone number:</strong> 123-456-789</li>
+            <li>
+              <strong>Facebook:</strong>
+              <a class="btn btn-link" href="#">facebook-example</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

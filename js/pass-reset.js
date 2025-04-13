@@ -1,42 +1,55 @@
-const resetBtn = document.getElementById("reset-btn");
-const email = document.getElementById("email");
-const emailError = document.querySelector(".email-error");
-const resetEmail = document.querySelector(".reset-first");
-const resetPassword = document.querySelector(".reset-second");
+const resetBtn = $("#reset-btn");
+const email = $("#email");
+const emailError = $(".email-error");
+const resetEmail = $(".reset-first");
+const resetPassword = $(".reset-second");
 
-resetBtn.style.backgroundColor = "rgb(200, 200, 200)";
-resetBtn.style.cursor = "not-allowed";
-resetBtn.disabled = true;
+resetBtn
+  .css({
+    "background-color": "rgb(200, 200, 200)",
+    cursor: "not-allowed",
+  })
+  .prop("disabled", true);
 
 const isChecked = () => {
-  if (email.value.trim()) {
-    resetBtn.style.backgroundColor = "";
-    resetBtn.style.cursor = "pointer";
-    resetBtn.disabled = false;
+  const emailValue = email.val().trim();
+  if (emailValue) {
+    resetBtn
+      .css({
+        "background-color": "",
+        cursor: "pointer",
+      })
+      .prop("disabled", false);
   } else {
-    resetBtn.style.backgroundColor = "rgb(200, 200, 200)";
-    resetBtn.style.cursor = "not-allowed";
-    resetBtn.disabled = true;
+    resetBtn
+      .css({
+        "background-color": "rgb(200, 200, 200)",
+        cursor: "not-allowed",
+      })
+      .prop("disabled", true);
   }
 };
-email.addEventListener("input", isChecked);
-resetBtn.addEventListener("click", (event) => {
+email.on("input", isChecked);
+resetBtn.click((event) => {
   event.preventDefault();
-  fetch("./db/user.json")
+  fetch("../db/user.json")
     .then((response) => response.json())
     .then((users) => {
-      const enteredEmail = email.value.trim();
+      const enteredEmail = email.val().trim();
       const user = users.find((u) => u.email === enteredEmail);
 
       if (user) {
-        resetPassword.style.display = "block";
-        resetEmail.style.display = "none";
-        emailError.style.display = "none";
+        resetPassword.css("display", "block");
+        resetEmail.css("display", "none");
+        emailError.css("display", "none");
       } else {
-        emailError.style.display = "block";
-        emailError.style.color = "red";
-        emailError.style.fontSize = "13px";
-        emailError.textContent = "Incorrect email";
+        emailError
+          .css({
+            display: "block",
+            color: "red",
+            "font-size": "13px",
+          })
+          .text("Incorrect email");
         console.log("Wrong email");
       }
     })

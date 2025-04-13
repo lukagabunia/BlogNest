@@ -1,112 +1,125 @@
-//inputs
-const signUpConEmail = document.getElementById("con-email");
-const signUpEmail = document.getElementById("email");
-const signUpPassword = document.getElementById("pass");
-const signUpConPassword = document.getElementById("con-pass");
-const firstName = document.getElementById("first-name");
-const lastName = document.getElementById("last-name");
-const male = document.getElementById("male");
-const female = document.getElementById("female");
+// Inputs
+const signUpConEmail = $("#con-email");
+const signUpEmail = $("#email");
+const signUpPassword = $("#pass");
+const signUpConPassword = $("#con-pass");
+const firstName = $("#first-name");
+const lastName = $("#last-name");
+const male = $("#male");
+const female = $("#female");
 
-//errors
-const error = document.querySelector(".error");
-const firstNameError = document.querySelector(".firstname-error");
-const lastNameError = document.querySelector(".lastname-error");
-const conPassError = document.querySelector(".con-error");
-const conEmailError = document.querySelector(".con-email-error");
+// Errors
+const error = $(".error");
+const firstNameError = $(".firstname-error");
+const lastNameError = $(".lastname-error");
+const conPassError = $(".con-error");
+const conEmailError = $(".con-email-error");
 
-//button
-const signUpButton = document.getElementById("signup-btn");
-signUpButton.style.backgroundColor = "rgb(200, 200, 200)";
-signUpButton.style.cursor = "not-allowed";
-signUpButton.disabled = true;
+// Button
+const signUpButton = $("#signup-btn");
+signUpButton
+  .css({
+    "background-color": "rgb(200, 200, 200)",
+    cursor: "not-allowed",
+  })
+  .prop("disabled", true);
 
-//checking inputs
+// Checking inputs
 const isChecked = () => {
   if (
-    lastName.value.trim() &&
-    firstName.value.trim() &&
-    signUpEmail.value.trim() &&
-    signUpPassword.value.trim() &&
-    signUpConPassword.value.trim() &&
-    signUpConEmail.value.trim()
+    lastName.val().trim() &&
+    firstName.val().trim() &&
+    signUpEmail.val().trim() &&
+    signUpPassword.val().trim() &&
+    signUpConPassword.val().trim() &&
+    signUpConEmail.val().trim()
   ) {
-    signUpButton.style.backgroundColor = "";
-    signUpButton.style.cursor = "pointer";
-    signUpButton.disabled = false;
+    signUpButton
+      .css({
+        "background-color": "",
+        cursor: "pointer",
+      })
+      .prop("disabled", false);
   } else {
-    signUpButton.style.backgroundColor = "rgb(200, 200, 200)";
-    signUpButton.style.cursor = "not-allowed";
-    signUpButton.disabled = true;
+    signUpButton
+      .css({
+        "background-color": "rgb(200, 200, 200)",
+        cursor: "not-allowed",
+      })
+      .prop("disabled", true);
   }
 };
 
-firstName.addEventListener("input", isChecked);
-lastName.addEventListener("input", isChecked);
-signUpEmail.addEventListener("input", isChecked);
-signUpPassword.addEventListener("input", isChecked);
-signUpConPassword.addEventListener("input", isChecked);
-signUpConEmail.addEventListener("input", isChecked);
+// Input event listeners
+firstName.on("input", isChecked);
+lastName.on("input", isChecked);
+signUpEmail.on("input", isChecked);
+signUpPassword.on("input", isChecked);
+signUpConPassword.on("input", isChecked);
+signUpConEmail.on("input", isChecked);
 
-male.addEventListener("input", () => {
-  if (male.checked) {
-    female.checked = false;
+// Gender toggle
+male.on("input", function () {
+  if ($(this).is(":checked")) {
+    female.prop("checked", false);
   }
 });
-female.addEventListener("input", () => {
-  if (female.checked) {
-    male.checked = false;
-  }
-});
-
-firstName.addEventListener("input", (e) => {
-  const inputValue = e.target.value.trim();
-  if (inputValue.length < 3 && inputValue.length > 0) {
-    firstNameError.style.color = "red";
-    firstNameError.style.fontSize = "13px";
-    firstNameError.textContent =
-      "First name must be at least 2 characters long";
-  } else {
-    return (firstNameError.textContent = "");
+female.on("input", function () {
+  if ($(this).is(":checked")) {
+    male.prop("checked", false);
   }
 });
 
-lastName.addEventListener("input", (e) => {
-  const inputValue = e.target.value.trim();
-  if (inputValue.length < 3 && inputValue.length > 0) {
-    lastNameError.style.color = "red";
-    lastNameError.style.fontSize = "13px";
-    lastNameError.textContent = "Last name must be at least 2 characters long";
+// Input validations
+firstName.on("input", function () {
+  const value = $(this).val().trim();
+  if (value.length < 3 && value.length > 0) {
+    firstNameError
+      .css({ color: "red", "font-size": "13px" })
+      .text("First name must be at least 2 characters long");
   } else {
-    return (lastNameError.textContent = "");
+    firstNameError.text("");
   }
 });
 
-signUpPassword.addEventListener("input", (e) => {
-  const inputValue = e.target.value.trim();
-  if (inputValue.length < 8 && inputValue.length > 0) {
-    error.style.color = "red";
-    error.style.fontSize = "13px";
-    error.textContent = "Password must be at least 8 characters long";
+lastName.on("input", function () {
+  const value = $(this).val().trim();
+  if (value.length < 3 && value.length > 0) {
+    lastNameError
+      .css({ color: "red", "font-size": "13px" })
+      .text("Last name must be at least 2 characters long");
   } else {
-    return (error.textContent = "");
+    lastNameError.text("");
   }
 });
-signUpConEmail.addEventListener("input", (e) => {
-  if (e.target.value !== signUpEmail.value) {
-    conEmailError.style.color = "red";
-    conEmailError.style.fontSize = "13px";
-    conEmailError.textContent = "Emails do not match";
+
+signUpPassword.on("input", function () {
+  const value = $(this).val().trim();
+  if (value.length < 8 && value.length > 0) {
+    error
+      .css({ color: "red", "font-size": "13px" })
+      .text("Password must be at least 8 characters long");
   } else {
-    return (conEmailError.textContent = "");
+    error.text("");
   }
 });
-signUpConPassword.addEventListener("input", (e) => {
-  if (e.target.value !== signUpPassword.value) {
-    conPassError.style.color = "red";
-    conPassError.style.fontSize = "13px";
-    conPassError.textContent = "Passwords do not match";
+
+signUpConEmail.on("input", function () {
+  if ($(this).val() !== signUpEmail.val()) {
+    conEmailError
+      .css({ color: "red", "font-size": "13px" })
+      .text("Emails do not match");
   } else {
-    return (conPassError.textContent = "");
+    conEmailError.text("");
+  }
+});
+
+signUpConPassword.on("input", function () {
+  if ($(this).val() !== signUpPassword.val()) {
+    conPassError
+      .css({ color: "red", "font-size": "13px" })
+      .text("Passwords do not match");
+  } else {
+    conPassError.text("");
   }
 });
