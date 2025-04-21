@@ -8,8 +8,6 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 5000;
 
-const userIsAuthorized = false;
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use("/js", express.static(__dirname + "/js"));
@@ -52,6 +50,12 @@ app.post("/contact-submit", (req, res) => {
 app.post("/signup/submit", (req, res) => {
   console.log(req.body);
   res.redirect("/");
+});
+
+/// product-details id
+app.get("/post/:id", (req, res) => {
+  const postId = req.params.id; // Get the 'id' from the URL
+  res.send(`Post ID is ${postId}`);
 });
 
 app.listen(port, () => {

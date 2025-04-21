@@ -39,7 +39,7 @@ function createCard(card) {
         </div>
         <div class="action-container d-flex">
           <button class="btn card-btn">
-            <a href="/details?id=${card.id}">See more...</a>
+            <a href="/post/${card.id}">See more...</a>
           </button>
           <img class="share-icon" src="../Assets/Icons/share-solid.svg" alt="share" />
         </div>
